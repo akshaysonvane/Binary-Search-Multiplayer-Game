@@ -3,3 +3,9 @@ Feel free to post any important links or notes related to team agenda or relatin
 Thank you.
 
 Team Roaster Sheet : https://docs.google.com/spreadsheets/d/15NzJQWwixC-1mEwja2uZei3djryljsjT9jFzBL2GSU4/edit?usp=sharing
+
+RMI links:
+
+https://en.wikipedia.org/wiki/Java_remote_method_invocation
+http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136424.html
+http://web.cs.wpi.edu/~rek/DCS/D04/JavaRMI.html
