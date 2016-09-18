@@ -1,0 +1,13 @@
+CS unplugged activities:
+
+1. Error detection:
+
+Select 36 cards which is colored white one side and black another side. Ask a kid to place 25 cads in 5*5 rows and column. 
+Kid is free to keep card with any side. Now you add one row and column to make it 6*6. 
+In this new row and column, add cards such that odd number of black is there. Now you close your eyes and ask the kid to turn any card.
+Row and column in which this card lies, will have even number of blacks. Children will love it as it is like a magic to find which card they turned.
+
+2. Image storage in computer:
+
+This is a way to teach children hows information is stored in computer. Black/white image is stored in the form of 0,1 depending on the sequence black and white 
+dots are there on the monitor window. 
