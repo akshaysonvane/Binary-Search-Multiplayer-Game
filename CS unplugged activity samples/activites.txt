@@ -11,3 +11,4 @@ Row and column in which this card lies, will have even number of blacks. Childre
 
 This is a way to teach children hows information is stored in computer. Black/white image is stored in the form of 0,1 depending on the sequence black and white 
 dots are there on the monitor window. 
+
