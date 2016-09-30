@@ -1,8 +1,11 @@
 import java.rmi.RMISecurityManager; 
 import java.rmi.Naming; 
 import java.rmi.RemoteException; 
-public class GetSetClient 
+import java.rmi.server.UnicastRemoteObject;
+public class GetSetClient extends UnicastRemoteObject implements IClientCallBack
 { 
+    private int nValue = 15;
+    public GetSetClient() throws RemoteException {}
     public static void main(String arg[]) 
     { 
         
@@ -14,6 +17,7 @@ public class GetSetClient
                 "localhost" + 
                 "/GetsetServer");         //objectname in registry 
 	   
+	   obj.Register(new GetSetClient());
            System.out.println(obj.getValue()); 
 	   obj.setValue(11);
 	   System.out.println(obj.getValue());
@@ -24,4 +28,7 @@ public class GetSetClient
            e.printStackTrace(); 
         } 
     } 
+
+    public int getValue() { return nValue; } 
+    public void setValue(int v) { nValue = v;}
 } 
