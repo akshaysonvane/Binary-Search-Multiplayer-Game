@@ -19,6 +19,7 @@ Value displayed by team:
 Respect is one of the core values of Extreme Programming. When i first my team members we introduced eachother and everybody shared their journey to SJSU and their background. Except for me and my team mate Mandar, rest of them had good industrial experience. We always keep our options open for their advice as their advice brings experience perspective to table. 
 Members of the team always respect each other, even the one's who have experience listen patiently what i have to say or their viewpoint. I liked the way team potrays such a value.
 
+
 Week2:
 
 
@@ -26,4 +27,4 @@ During this week team had meetings and discussed a lot about how to build things
 Me and other team members were freshers as in we do not have any industrial experience but others who had good experience helped us out understanding the GitHub environment. They not only provided us the material to read but only resolved our queries patiently. Including me team members shows respect towards one another. One of the team members was sick for few days, rest of the team shared responsibilities during his absence and when he was back healthy he thanked team members and helped them in any way possible as sign of respect.
 Few members worked on analysing the architecture of the game and few worked on back end connections of the game. Each team member discussed what they explored in their task and discussed this with other team members. During the discussion they respected what other had to say about the approach.Team members are demonstrating great respect value to one another.
 No team member has not made other team member feel low and i guess they never will. Team is functioning good .Week by week team member coordination is getting better and we hope this continues and we get to deliver our responsibilities flawlessly. 
-
+ 
