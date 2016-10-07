@@ -29,7 +29,9 @@ Few members worked on analysing the architecture of the game and few worked on b
 No team member has not made other team member feel low and i guess they never will. Team is functioning good .Week by week team member coordination is getting better and we hope this continues and we get to deliver our responsibilities flawlessly. 
  
 
+
 Week 3:
+
 
 Past week team members gathered to analyse how to approach the development of game? since we were sure that developing a game with five members pair programming will not take long. But then analysed to design the game first and analyse whether the design is perfect and efficient, then after completion of the design part we can develop the game by building code based on the models.
 
@@ -38,3 +40,4 @@ During team discussion i represented as respect value in the team by making sure
 During team discussions and teamwork i have suggested team that let's make a practise of sharing your views to team members prior to any actions being taken. This practise will help to understand any conflict prior to performing actions and also develops respect towards team member for effort to share their knowledge to help out each other.
 
 This week we have planned to work on sequence, class and activity diagrams, so that we will have a clear idea of how our application should work and how to develop with good structure by eliminating waste before coding itself.
+
