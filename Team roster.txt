@@ -12,4 +12,5 @@ http://web.cs.wpi.edu/~rek/DCS/D04/JavaRMI.html
 
 
 https://docs.oracle.com/javase/tutorial/rmi/
-please refer above link for RMI...
+http://www.oracle.com/technetwork/java/javase/tech/index-jsp-138781.html
+please refer above links for RMI...
