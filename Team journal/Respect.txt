@@ -41,3 +41,12 @@ During team discussions and teamwork i have suggested team that let's make a pra
 
 This week we have planned to work on sequence, class and activity diagrams, so that we will have a clear idea of how our application should work and how to develop with good structure by eliminating waste before coding itself.
 
+
+
+Week 4:
+
+This week we started of with standup and discussed what we missed out in waffle board, we did not plan out all the backlogs in the first week. So we corrected this mistake by analysing all the backlogs and necessary activities to meet the deadline. As a representative of respect value in the team, i was checking whether everyone is taking part in the team and contributing their ideas and making sure no member is being down valued.
+
+This week team showed up great spirit and portrayed respected towards all members including freshers in all fronts. As we made list of the backlogs we updated the waffle board and set up the team plan for coming weeks. Everyone shared their ideas on each phase of development, testing and deployment. This week we improvised value for one another considering the effort they bring to the table. This week we are working and finalizing the UML diagrams to collaborate design of the game.
+
+Team do not require any special advice to respect each other as they are demonstrating great team spirit and value each other irrespective of how knowledged one is. I like the attitude of the team and we are focusing on working efficiently and creating a great game within the deadline.
