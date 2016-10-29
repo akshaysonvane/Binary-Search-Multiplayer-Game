@@ -9,3 +9,8 @@ RMI links:
 https://en.wikipedia.org/wiki/Java_remote_method_invocation
 http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136424.html
 http://web.cs.wpi.edu/~rek/DCS/D04/JavaRMI.html
+
+
+https://docs.oracle.com/javase/tutorial/rmi/
+http://www.oracle.com/technetwork/java/javase/tech/index-jsp-138781.html
+please refer above links for RMI...
