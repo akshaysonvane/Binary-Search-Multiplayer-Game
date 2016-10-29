@@ -1,0 +1,4 @@
+javac -cp dist/restlet.jar;dist/json.jar -d build src/*.java
+
+
+start java -cp build;dist/restlet.jar;dist/json.jar multiplayerGameServer.MultiplayerGame multiplayerGameServer.RandomNumberList multiplayerGameServer.Player multiplayerGameServer.MultiplayerGameCore multiplayerGameServer.LeaveGame multiplayerGameServer.JoinGame
