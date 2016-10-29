@@ -17,7 +17,8 @@ public class MultiplayerGame extends Application {
         Router router = new Router(getContext());
 
         // Defines only one route
-        router.attach("/RandomNumberList", RandomNumberList.class);
+        router.attach("/JoinGame", JoinGame.class);
+	router.attach("/LeaveGame", LeaveGame.class);
 
         return router;
     }
@@ -29,7 +30,7 @@ public class MultiplayerGame extends Application {
 	System.out.printf("i am here");
 
         // Add a new HTTP server listening on port 8080.  
-        component.getServers().add(Protocol.HTTP, 8080);  
+        component.getServers().add(Protocol.HTTP, 8083);  
 
 	System.out.printf("i am here");
 

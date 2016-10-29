@@ -1,19 +1,22 @@
 package multiplayerGameServer;
 
-import org.restlet.resource.Get;
-import org.restlet.resource.ServerResource;
+import org.json.JSONObject;
 import java.util.*;
-public class RandomNumberList extends ServerResource 
+
+public class RandomNumberList 
 {    
-    @Get
-    public List<Integer> getListOfRandomNumber(int nBound)
+    public String getListOfRandomNumber()
     {
         Random randomNumberGenerator = new Random();
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0; i < 10; i++)
-        {
-            list.add(randomNumberGenerator.nextInt(nBound));
-        }
-        return list;
-    }    
+
+	JSONObject obj = new JSONObject();
+	int BOUND = 10; //this 10 will come as a variable from database depending on the level
+
+        for(int i = 0; i < 10; i++) 
+        {            
+	    obj.put("Element " + (i+1), randomNumberGenerator.nextInt(BOUND ));
+        }	
+	
+	return obj.toString();	
+    }
 }
