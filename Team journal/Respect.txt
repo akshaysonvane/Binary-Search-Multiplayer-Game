@@ -1,0 +1,52 @@
+				
+Extereme Programming(XP) value : Respect
+
+Week1 :
+
+
+
+
+what did you learn from XP values?
+
+Extreme programming values, not just one but all of it's values are essential for every software team to perform well. What i found when i read more about XP is that it enhances the outcome that can be achieved by preserving  professional as well as personal values. 
+These values will be extremely helpful to plan effictively, to keep things simple, to manage work effectivey. Every team member deserve equal respect as they collaborate is some or the other way to keep things in progress.
+
+Other values that support respect value are Whole as one , pair programming and energized work. These values have foundation of respecting every individual in the team. Whole as one have perspective of team being a single entity and team consist of members commiting to achieve same goal. 
+Every individual work for team progress but not for 'their progress'. When a member of the team comits mistakes then team has to support him to understand why did this happen and how to overcome such mistakes and avoid such in future. Pair programming values respect as it builds bond between members and everyone values work of other member for their effort. 
+It gives each other broad perspective that generally individual fail to analyse.
+
+Value displayed by team:
+Respect is one of the core values of Extreme Programming. When i first my team members we introduced eachother and everybody shared their journey to SJSU and their background. Except for me and my team mate Mandar, rest of them had good industrial experience. We always keep our options open for their advice as their advice brings experience perspective to table. 
+Members of the team always respect each other, even the one's who have experience listen patiently what i have to say or their viewpoint. I liked the way team potrays such a value.
+
+
+Week2:
+
+
+During this week team had meetings and discussed a lot about how to build things and how to build the game. I encountered great values shown by members , some members helped out others with understanding things. Team members helped each other to cope up with the work.
+Me and other team members were freshers as in we do not have any industrial experience but others who had good experience helped us out understanding the GitHub environment. They not only provided us the material to read but only resolved our queries patiently. Including me team members shows respect towards one another. One of the team members was sick for few days, rest of the team shared responsibilities during his absence and when he was back healthy he thanked team members and helped them in any way possible as sign of respect.
+Few members worked on analysing the architecture of the game and few worked on back end connections of the game. Each team member discussed what they explored in their task and discussed this with other team members. During the discussion they respected what other had to say about the approach.Team members are demonstrating great respect value to one another.
+No team member has not made other team member feel low and i guess they never will. Team is functioning good .Week by week team member coordination is getting better and we hope this continues and we get to deliver our responsibilities flawlessly. 
+ 
+
+
+Week 3:
+
+
+Past week team members gathered to analyse how to approach the development of game? since we were sure that developing a game with five members pair programming will not take long. But then analysed to design the game first and analyse whether the design is perfect and efficient, then after completion of the design part we can develop the game by building code based on the models.
+
+During team discussion i represented as respect value in the team by making sure every member contributed their thought. Last week everyone has contributed their flow chart diagram of game flow, this week we analysed all flowchart diagrams and picked good points from all flowcharts. 
+
+During team discussions and teamwork i have suggested team that let's make a practise of sharing your views to team members prior to any actions being taken. This practise will help to understand any conflict prior to performing actions and also develops respect towards team member for effort to share their knowledge to help out each other.
+
+This week we have planned to work on sequence, class and activity diagrams, so that we will have a clear idea of how our application should work and how to develop with good structure by eliminating waste before coding itself.
+
+
+
+Week 4:
+
+This week we started of with standup and discussed what we missed out in waffle board, we did not plan out all the backlogs in the first week. So we corrected this mistake by analysing all the backlogs and necessary activities to meet the deadline. As a representative of respect value in the team, i was checking whether everyone is taking part in the team and contributing their ideas and making sure no member is being down valued.
+
+This week team showed up great spirit and portrayed respected towards all members including freshers in all fronts. As we made list of the backlogs we updated the waffle board and set up the team plan for coming weeks. Everyone shared their ideas on each phase of development, testing and deployment. This week we improvised value for one another considering the effort they bring to the table. This week we are working and finalizing the UML diagrams to collaborate design of the game.
+
+Team do not require any special advice to respect each other as they are demonstrating great team spirit and value each other irrespective of how knowledged one is. I like the attitude of the team and we are focusing on working efficiently and creating a great game within the deadline.
