@@ -1,15 +1,34 @@
 
-Story : Player starting a game
+Story : Player clicks on start game
 
 As a Player
-I want to either join a existing game or create my own game
+I want to join a existing game
 So that i can play along other players to compete
+
 
 Scenario 1: Player joins existing game
 Given that there is already a session running
 and the players who joined the game earlier are playing
+and the player has entered a unique player name
 When a new player wants to join game in certain scenario
 then he has to wait till the session ends
 and the current should continue undisturbed
-and the waiting player should get notified when connected to fresh session.
+and the waiting player should get notified when connected to fresh session
+and the current player should see the countdown time to start of next session
+
+
+Scenario 2: entered player name already taken by other player
+Given that user enters player name
+and that name matches with player name of other player
+when a new player wants to play the game under such circumstances
+then the player should be prompted to change the name
+and he should be alerted that entered name is already taken by other player 
+
+
+scenario 3: when the new session begins with the waiting player added
+Given that user enters the new game session
+and there are no more players waiting to join the game
+When a players get added to new session after waiting time is over
+then all the players have to be notified about new player added to game
+and the new player must be able to be the scoreboard along with other players
 
