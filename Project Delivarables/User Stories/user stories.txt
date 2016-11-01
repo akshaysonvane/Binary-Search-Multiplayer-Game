@@ -1,5 +1,5 @@
 
-Story : Player clicks on start game
+Story 1: Player clicks on start game
 
 As a Player
 I want to join a existing game
@@ -16,14 +16,12 @@ and the current should continue undisturbed
 and the waiting player should get notified when connected to fresh session
 and the current player should see the countdown time to start of next session
 
-
 Scenario 2: entered player name already taken by other player
 Given that user enters player name
 and that name matches with player name of other player
 when a new player wants to play the game under such circumstances
 then the player should be prompted to change the name
 and he should be alerted that entered name is already taken by other player 
-
 
 scenario 3: when the new session begins with the waiting player added
 Given that user enters the new game session
@@ -32,3 +30,16 @@ When a players get added to new session after waiting time is over
 then all the players have to be notified about new player added to game
 and the new player must be able to be the scoreboard along with other players
 
+
+Story 2: PLayer playing the game
+
+As a player
+I want to quit from existing game
+So that i can leave the game when i want to.
+
+Scenario 1: player leaves existing game
+Given that a player is already connected to a game
+and player is already playing the game
+when a player wants to quit the game in certain scenario
+then he can sefely exit the game by submitting the intermediate results
+and his score will be based on his intermediate game status.
