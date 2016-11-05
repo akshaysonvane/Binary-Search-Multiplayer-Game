@@ -1,9 +1,9 @@
-package multiplayerGameServer; 
+package multiplayergameServer; 
 
 public class Player
 {
 	private String sUserName;
-	private int nLevel; //0: Still playing, 1: done
+	private int nRoundStatus; //0: Still playing, 1: done
 	private int nScore;
 
 	public String getName()
@@ -16,14 +16,14 @@ public class Player
 		sUserName = szName;
 	}
 
-	public int getLevel()
+	public int getRoundStatus()
 	{
-		return nLevel;
+		return nRoundStatus;
 	}
 	
-	public void setLevel(int n)
+	public void setRoundStatus(int n)
 	{
-		nLevel = n;
+		nRoundStatus = n;
 	}
 
 	public int getScore()

@@ -1,4 +1,4 @@
-package multiplayerGameServer; 
+package multiplayergameServer; 
 import java.util.*;
 
 public class MultiplayerGameCore
@@ -18,16 +18,47 @@ public class MultiplayerGameCore
 
 	public Boolean addPlayer(Player newPlayer)
 	{
-		if(playerList.contains(newPlayer)) //fix this as this condition will always fail. Compare name instead of object.
-			return false;
+		for(int i = 0; i < playerList.size(); i++)
+		{
+                    if(playerList.get(i).getName().equalsIgnoreCase(newPlayer.getName()))
+                            return false;
+		}		
 
 		playerList.add(newPlayer);
 		return true;
 	}
 	public Boolean removePlayer(Player p)
 	{
-		playerList.remove(p);
-		return true;
+		for(int i = 0; i < playerList.size(); i++)
+		{
+                    if(playerList.get(i).getName().equalsIgnoreCase(p.getName()))
+                    {
+                            playerList.remove(i);
+                            return true;
+                    }
+		}
+		
+		return false;
+	}
+	public Boolean updatePlayerData(Player p)
+	{
+		for(int i = 0; i < playerList.size(); i++)
+		{
+			if(playerList.get(i).getName().equalsIgnoreCase(p.getName()))
+			{
+				int nCurrScore = playerList.get(i).getScore();
+				p.setScore(nCurrScore);
+				//All other data already came from client. Otherwise fill in here.
+				playerList.set(i, p);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public List<Player> getListofPlayer()
+	{
+		return playerList;
 	}
 	
 }

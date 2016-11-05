@@ -1,24 +1,27 @@
-package multiplayerGameServer;
+package multiplayergameServer;
 
-import org.json.JSONObject;
-import org.restlet.resource.Get;
-import org.restlet.resource.ServerResource;
+import org.json.* ;
+import org.restlet.representation.* ;
+import org.restlet.ext.json.* ;
+import org.restlet.resource.* ;
+import org.restlet.data.Form;
+
 import java.util.*;
 
 public class LeaveGame extends ServerResource
 {
 	@Get
-	public String leaveGame()
+        @Post
+	public Representation leaveGame(Representation entity)
 	{
 		//Need to read name that is coming from client
-		String name = "Sunil";
+		Form form = new Form(entity);
+		String userId = form.getFirstValue("userId");
 
 		Player p = new Player();
-		p.setName(name);
-		p.setLevel(0);
-		p.setScore(0);
+		p.setName(userId);
 		JSONObject obj = new JSONObject();
 		obj.put("Result", MultiplayerGameCore.getInstance().removePlayer(p));
-		return obj.toString();
+		return new JsonRepresentation(obj);
 	}
 }
