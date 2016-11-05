@@ -1,4 +1,4 @@
-package multiplayerGameServer;
+package multiplayergameServer;
 
 import org.json.JSONObject;
 import java.util.*;
@@ -14,7 +14,7 @@ public class RandomNumberList
 
         for(int i = 0; i < 10; i++) 
         {            
-	    obj.put("Element " + (i+1), randomNumberGenerator.nextInt(BOUND ));
+			obj.put("Element " + (i+1), randomNumberGenerator.nextInt(BOUND ));
         }	
 	
 	return obj.toString();	

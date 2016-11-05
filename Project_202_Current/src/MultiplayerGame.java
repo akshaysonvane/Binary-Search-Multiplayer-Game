@@ -1,4 +1,4 @@
-package multiplayerGameServer;
+package multiplayergameServer;
 
 import org.restlet.Application;
 import org.restlet.Restlet;
@@ -18,7 +18,8 @@ public class MultiplayerGame extends Application {
 
         // Defines only one route
         router.attach("/JoinGame", JoinGame.class);
-	router.attach("/LeaveGame", LeaveGame.class);
+		router.attach("/LeaveGame", LeaveGame.class);
+		router.attach("/SetGetPlayerStatus", GetSetPlayersStatus.class);
 
         return router;
     }
@@ -30,7 +31,7 @@ public class MultiplayerGame extends Application {
 	System.out.printf("i am here");
 
         // Add a new HTTP server listening on port 8080.  
-        component.getServers().add(Protocol.HTTP, 8083);  
+        component.getServers().add(Protocol.HTTP, 8080);  
 
 	System.out.printf("i am here");
 
