@@ -13,7 +13,7 @@ public class Player
 
 	public void setName(String szName)
 	{
-		sUserName = szName;
+		this.sUserName = szName;
 	}
 
 	public int getRoundStatus()
@@ -23,7 +23,7 @@ public class Player
 	
 	public void setRoundStatus(int n)
 	{
-		nRoundStatus = n;
+		this.nRoundStatus = n;
 	}
 
 	public int getScore()
@@ -33,6 +33,6 @@ public class Player
 	
 	public void setScore(int n)
 	{
-		nScore = n;
+		this.nScore = n;
 	}
 }
