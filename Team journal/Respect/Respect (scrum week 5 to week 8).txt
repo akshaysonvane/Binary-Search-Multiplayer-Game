@@ -1,0 +1,18 @@
+Week 5:
+
+Early in the week we had standup discussing about scrum methodology and project design. We discussed our game design and implementation method in docker 
+environment. Team members designed the client server communication using RMI but since professor introduced RESTful services and design patterns, we had to 
+adapt to the new requirement.
+
+Team respects each other considering the efforts they bring to the table. Sunil has made an effort to build up the starter code for the docker environment. 
+Team discussed about the Restful services and how could we implement it in our game. Since Akshay has a experience in deploying applications in docker, team 
+respected his inputs and suggestions regarding the docker usage for deploying applications. Everyone respects each other even if there exist differences in their 
+thinking about something. They would bring up their idea during the discussion and respect what others had to say about it. They resolve the differences by 
+adapting to idea that helps the project function smoothly.
+
+
+
+Week 6 :
+
+
+
