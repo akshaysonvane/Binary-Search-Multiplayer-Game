@@ -1,22 +1,45 @@
 package multiplayergameServer;
 
-import org.json.JSONObject;
+//import org.json.JSONObject;
 import java.util.*;
 
-public class RandomNumberList 
-{    
-    public String getListOfRandomNumber()
-    {
-        Random randomNumberGenerator = new Random();
+public class RandomNumberList
+{
+	private int no;
+        private ArrayList<Integer> arrayList = new ArrayList<>();
 
-	JSONObject obj = new JSONObject();
-	int BOUND = 10; //this 10 will come as a variable from database depending on the level
+	public RandomNumberList()
+	{		
+	}
 
-        for(int i = 0; i < 10; i++) 
-        {            
-			obj.put("Element " + (i+1), randomNumberGenerator.nextInt(BOUND ));
-        }	
-	
-	return obj.toString();	
-    }
+	public void generateRandomNumbers()
+	{
+            Random randomNumberGenerator = new Random();
+            
+            int BOUND = 15; // Bound value sets the number of balls
+
+            for (int i = 0; i < BOUND; i++)
+            {
+                    no = randomNumberGenerator.nextInt(98) + 1;
+
+                    if (!arrayList.contains(no))
+                    {
+                            arrayList.add(no);
+                    }		
+            }
+
+            Collections.sort(arrayList);
+            no = arrayList.get(randomNumberGenerator.nextInt(BOUND - 1));
+	}
+        
+        public ArrayList<Integer> getRandomNumberList()
+        {
+            generateRandomNumbers();
+            return arrayList;        
+        }
+        
+        public int getNumberToSearch()
+        {
+            return no;
+        }
 }

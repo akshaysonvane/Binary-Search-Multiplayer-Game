@@ -1,10 +1,50 @@
-package multiplayergameServer; 
+package multiplayergameServer;
+
+import java.util.ArrayList;
 
 public class Player
 {
 	private String sUserName;
-	private int nRoundStatus; //0: Still playing, 1: done
-	private int nScore;
+	private GameSessionData sessionData = new GameSessionData();
+        
+        IGameStateManager subject;
+        
+        public void setSubject( IGameStateManager s)
+        {
+            subject = s;
+        }
+        
+        public void notifi()
+        {
+            System.out.println("notify");
+            GameSessionData gd = subject.getState().getPlayerGameData();
+            sessionData.nGameState = gd.nGameState;
+            sessionData.nNumberToSearch = gd.nNumberToSearch;
+            
+            if(gd.nRoundStatus >= 0)
+                sessionData.nRoundStatus = gd.nRoundStatus;
+            
+            if(gd.nScore >= 0)
+                sessionData.nScore = gd.nScore;
+            
+            if(gd.randomNumber.size() > 0)
+                sessionData.randomNumber = gd.randomNumber;
+        }
+        
+        public int getGameState()
+        {
+            return sessionData.nGameState;
+        }
+        
+        public ArrayList<Integer> getRandomNumberList()
+        {
+            return sessionData.randomNumber;
+        }
+        
+        public int getNumberToSearch()
+        {
+            return sessionData.nNumberToSearch;
+        }
 
 	public String getName()
 	{
@@ -13,26 +53,26 @@ public class Player
 
 	public void setName(String szName)
 	{
-		sUserName = szName;
+		this.sUserName = szName;
 	}
 
 	public int getRoundStatus()
 	{
-		return nRoundStatus;
+		return sessionData.nRoundStatus;
 	}
-	
+
 	public void setRoundStatus(int n)
 	{
-		nRoundStatus = n;
+		this.sessionData.nRoundStatus = n;
 	}
 
 	public int getScore()
 	{
-		return nScore;
+		return sessionData.nScore;
 	}
-	
+
 	public void setScore(int n)
 	{
-		nScore = n;
+		this.sessionData.nScore = n;
 	}
 }
