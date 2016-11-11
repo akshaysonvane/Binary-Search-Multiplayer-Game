@@ -40,6 +40,7 @@ class.Ball9.superclass=greenfoot.Actor
 class.Credit.superclass=greenfoot.World
 class.Credits.image=button_credits.png
 class.Credits.superclass=greenfoot.Actor
+class.GameScreen.image=background.png
 class.GameScreen.superclass=greenfoot.World
 class.Instruction.superclass=greenfoot.World
 class.Instructions.image=button_instructions.png
