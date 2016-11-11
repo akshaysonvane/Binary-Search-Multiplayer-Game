@@ -5,48 +5,41 @@ import java.util.*;
 
 public class RandomNumberList
 {
-	int no;
-	NumberModel model;
+	private int no;
+        private ArrayList<Integer> arrayList = new ArrayList<>();
 
-	public RandomNumberList(NumberModel model)
-	{
-		this.model = model;
+	public RandomNumberList()
+	{		
 	}
 
 	public void generateRandomNumbers()
 	{
-		Random randomNumberGenerator = new Random();
+            Random randomNumberGenerator = new Random();
+            
+            int BOUND = 15; // Bound value sets the number of balls
 
-		ArrayList<Integer> arrayList = new ArrayList<>();
+            for (int i = 0; i < BOUND; i++)
+            {
+                    no = randomNumberGenerator.nextInt(98) + 1;
 
-		// JSONObject obj = new JSONObject();
-		int BOUND = 15; // Bound value sets the number of balls
+                    if (!arrayList.contains(no))
+                    {
+                            arrayList.add(no);
+                    }		
+            }
 
-		for (int i = 0; i < BOUND; i++)
-		{
-			no = randomNumberGenerator.nextInt(98) + 1;
-
-			if (!arrayList.contains(no))
-			{
-				arrayList.add(no);
-			}
-
-			// obj.put("Element " + (i + 1),
-			// randomNumberGenerator.nextInt(BOUND));
-		}
-
-		Collections.sort(arrayList);
-
-		Integer noArray[] = new Integer[arrayList.size()];
-		noArray = arrayList.toArray(noArray);
-
-		model.setNo(arrayList.get(randomNumberGenerator.nextInt(BOUND - 1)));
-		model.setNoArray(noArray);
-
-		// obj.put("Elements", arrayList.toArray());
-		// obj.put("Number",
-		// arrayList.get(randomNumberGenerator.nextInt(BOUND)));
-
-		// return obj.toString();
+            Collections.sort(arrayList);
+            no = arrayList.get(randomNumberGenerator.nextInt(BOUND - 1));
 	}
+        
+        public ArrayList<Integer> getRandomNumberList()
+        {
+            generateRandomNumbers();
+            return arrayList;        
+        }
+        
+        public int getNumberToSearch()
+        {
+            return no;
+        }
 }

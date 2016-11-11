@@ -33,6 +33,19 @@ public class GetSetPlayersStatus extends ServerResource
 			jo.put("name", playerList.get(i).getName());
 			jo.put("roundStatus", playerList.get(i).getRoundStatus());
 			jo.put("score", playerList.get(i).getScore());
+                        jo.put("GameState", playerList.get(i).getGameState());
+                        jo.put("NumberToSearch", playerList.get(i).getNumberToSearch());
+                        
+                        jo.put("RandomNumber", playerList.get(i).getRandomNumberList());
+                        
+                        JSONArray ja_randomNumber = new JSONArray();
+                        ArrayList<Integer> rn = playerList.get(i).getRandomNumberList();
+                        
+                        for(int j = 0; j < rn.size(); j++)
+                        {
+                            JSONObject jo_randomNumber = new JSONObject();
+                        }
+                        
 			ja.put(jo);
 		}
 

@@ -4,20 +4,23 @@ import java.util.*;
 public class MultiplayerGameCore
 {
 	List<Player> playerList = new ArrayList<Player>();
+        GameStateManager gameStateManager = new GameStateManager(); 
+        Timer timer = new Timer();
 
 	private static MultiplayerGameCore instance = null;
    	private MultiplayerGameCore() {	}
 	
-	public static MultiplayerGameCore getInstance() 
+	public static synchronized MultiplayerGameCore getInstance() 
 	{
       		if(instance == null) {
-         		instance = new MultiplayerGameCore();
+         		instance = new MultiplayerGameCore();                        
       		}
       		return instance;
    	}
 
 	public Boolean addPlayer(Player newPlayer)
-	{
+	{ 
+            
 		for(int i = 0; i < playerList.size(); i++)
 		{
                     if(playerList.get(i).getName().equalsIgnoreCase(newPlayer.getName()))
@@ -25,16 +28,20 @@ public class MultiplayerGameCore
 		}		
 
 		playerList.add(newPlayer);
+                gameStateManager.attach(newPlayer);
+                newPlayer.setSubject(gameStateManager);
 		return true;
 	}
 
 	public Boolean removePlayer(Player p)
 	{
+            timer.schedule(gameStateManager, 3000, 3000);
 		for(int i = 0; i < playerList.size(); i++)
 		{
                     if(playerList.get(i).getName().equalsIgnoreCase(p.getName()))
                     {
                             playerList.remove(i);
+                            gameStateManager.detach(p);
                             return true;
                     }
 		}
