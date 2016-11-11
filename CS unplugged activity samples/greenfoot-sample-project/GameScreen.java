@@ -8,11 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GameScreen extends World
 {
-
+        GreenfootSound backgroundMusic = new GreenfootSound("bgm game.wav");
+        
     public GameScreen()
     {    
        super(1100, 600, 1); 
-        prepare();
+       backgroundMusic.playLoop();
+       prepare();
     }
     
     public void prepare()

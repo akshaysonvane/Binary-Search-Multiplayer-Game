@@ -19,13 +19,16 @@ public class Credits extends Actor
         
         if(Greenfoot.mouseMoved(null))
         hover = Greenfoot.mouseMoved(this);
-        if(hover)
+        if(hover){
         setImage("button_credits-hover.png"); 
+        //Greenfoot.playSound("Tiny_Button.wav");
+         }
         else
         setImage("button_credits.png");
         
         if(Greenfoot.mouseClicked(this))
         {
+            Greenfoot.playSound("Fuzzy_Beep.wav");
             Greenfoot.setWorld(new Credit());
         }
     }    

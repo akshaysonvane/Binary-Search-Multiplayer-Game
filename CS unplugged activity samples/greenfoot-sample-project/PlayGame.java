@@ -17,15 +17,20 @@ public class PlayGame extends Actor
     
     public void act() 
     {
+       // Greenfoot.playSound("Fuzzy_Beep.wav");
         
         if(Greenfoot.mouseMoved(null))
         hover = Greenfoot.mouseMoved(this);
-        if(hover)
-        setImage("button_play-game-hover.png"); 
+        if(hover){
+        setImage("button_play-game-hover.png");
+         }
         else
         setImage("button_play-game.png");
         
-        if(Greenfoot.mouseClicked(this))
-        Greenfoot.setWorld(new GameScreen());
+        if(Greenfoot.mouseClicked(this)){
+            Greenfoot.playSound("Fuzzy_Beep.wav");
+            Greenfoot.setWorld(new GameScreen());
+        }
+    
     }    
 }

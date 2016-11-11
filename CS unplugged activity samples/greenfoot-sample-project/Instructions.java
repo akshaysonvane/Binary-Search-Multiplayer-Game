@@ -21,11 +21,15 @@ public class Instructions extends Actor
         if(Greenfoot.mouseMoved(null))
         hover = Greenfoot.mouseMoved(this);
         if(hover)
-        setImage("button_instructions-hover.png"); 
+        {
+            setImage("button_instructions-hover.png"); 
+           // Greenfoot.playSound("Tiny_Button.wav");
+        }
         else
         setImage("button_instructions.png");
         
         if(Greenfoot.mouseClicked(this)){
+            Greenfoot.playSound("Fuzzy_Beep.wav");
             Greenfoot.setWorld(new Instruction());
         }
         
