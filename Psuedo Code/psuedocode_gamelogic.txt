@@ -1,0 +1,45 @@
+//Intial Draft of Psuedo Code
+//Feel free to edit and add comments :)
+	
+/* Assumptions
+Game to be stopped once winner is found
+Once a game is in progress, players cannot be added to it and must wait for next game to begin
+*/
+		
+//Java psuedo code for generating random numbers for game logic
+
+/* Note: The following algorithm is optimal to be used instead of using the inbuilt random number generation function
+as it is possible for the random number generation function to store duplicate values in the collection */
+	
+for (int i=1; i<100; i++) //iterate numbers between 1 to 100
+{
+        list.add(new Integer(i)); //store the numbers in a list
+}
+		
+Collections.shuffle(list); //shuffle the list
+for (int i=0; i<number_of_cups; i++) //number_of_cups is number of guessing cups as shown in wireframe
+{
+    gamelist.add(list.get(i)); //select the random numbers required and store in a game list
+}
+		
+//Java psuedo code for picking one random number amongst the selected		
+Collections.shuffle(gamelist);
+gametarget=gamelist.get(0);
+			
+//Psuedo code to stop game and select winner
+/* Create a 2D array with flag value (0,1) and the gamelist
+Whenever a player clicks a cup, change corresponding flag value to indicate "revealed" */
+		
+if gamelist[guess][flag] = gametarget
+{
+	declare winner;
+	stop the game;
+	store/declare points;
+}
+		
+else if gamelist[guess][flag] < target || gamelist[guess] > target
+{
+	set flag to revealed;
+	continue game;
+}
+			

@@ -1,23 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Write a description of class GameScreen here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Playground extends World
+public class GameScreen extends World
 {
 
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
-    public Playground()
+    public GameScreen()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(700, 500, 1); 
-        
+       super(1100, 600, 1); 
         prepare();
     }
     

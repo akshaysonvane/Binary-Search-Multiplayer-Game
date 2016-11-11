@@ -27,6 +27,7 @@ public class MultiplayerGameCore
 		playerList.add(newPlayer);
 		return true;
 	}
+
 	public Boolean removePlayer(Player p)
 	{
 		for(int i = 0; i < playerList.size(); i++)

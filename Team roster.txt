@@ -1,3 +1,4 @@
+
 Please update your journal sheets as and when you make enough observations while working with the team. 
 Feel free to post any important links or notes related to team agenda or relating to projectwork objective.
 Thank you.
@@ -14,3 +15,18 @@ http://web.cs.wpi.edu/~rek/DCS/D04/JavaRMI.html
 https://docs.oracle.com/javase/tutorial/rmi/
 http://www.oracle.com/technetwork/java/javase/tech/index-jsp-138781.html
 please refer above links for RMI...
+
+
+
+
+PROJECT SCOPE AND OBJECTIVES:
+
+Justification: CS Unplugged activities will help to educate people with computer science concepts. Searching and sorting concepts are important when we think about data. Building an interactive game about binary search will help to educate people with one of the searching concept.
+
+Scope: This project will consist of a game about binary search. The modules of the game will include users looking for the cup under which the desired number is hidden, binary searching will help user to speed up the process and timer will help to check who did the best job.
+
+Objectives:
+-	Implement binary search logic
+-	Implement User Interaction
+-	Make multiple players able to play the game
+-	Teach binary search concept using the game
