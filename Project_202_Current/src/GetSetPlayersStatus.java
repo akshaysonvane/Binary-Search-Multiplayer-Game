@@ -37,6 +37,7 @@ public class GetSetPlayersStatus extends ServerResource
                         jo.put("NumberToSearch", playerList.get(i).getNumberToSearch());
                         
                         jo.put("RandomNumber", playerList.get(i).getRandomNumberList());
+                        jo.put("Round", MultiplayerGameCore.getInstance().getRound());
                         
                         JSONArray ja_randomNumber = new JSONArray();
                         ArrayList<Integer> rn = playerList.get(i).getRandomNumberList();

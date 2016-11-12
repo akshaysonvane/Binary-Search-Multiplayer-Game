@@ -16,6 +16,7 @@ public class GameStartState implements IGameState
 {    
     
     GameSessionData gd = new GameSessionData();
+    RandomNumberList rn = RandomNumberList.getInstance();
     
     public int getCurrentState()
     {
@@ -23,15 +24,12 @@ public class GameStartState implements IGameState
     }
     
     public GameSessionData getPlayerGameData()
-    {
-        RandomNumberList rn = new RandomNumberList();        
-        
+    {       
         gd.nGameState = 1;        
         gd.nRoundStatus = -1;
         gd.nScore = -1;
         gd.randomNumber = rn.getRandomNumberList();
         gd.nNumberToSearch = rn.getNumberToSearch(); 
-        System.out.println("getdata");
         return gd;
     }    
 }

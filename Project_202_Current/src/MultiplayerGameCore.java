@@ -3,6 +3,7 @@ import java.util.*;
 
 public class MultiplayerGameCore
 {
+        int roundLeft, round;
 	List<Player> playerList = new ArrayList<Player>();
         GameStateManager gameStateManager = new GameStateManager(); 
         Timer timer = new Timer();
@@ -34,8 +35,7 @@ public class MultiplayerGameCore
 	}
 
 	public Boolean removePlayer(Player p)
-	{
-            timer.schedule(gameStateManager, 3000, 3000);
+	{            
 		for(int i = 0; i < playerList.size(); i++)
 		{
                     if(playerList.get(i).getName().equalsIgnoreCase(p.getName()))
@@ -54,11 +54,12 @@ public class MultiplayerGameCore
 		{
 			if(playerList.get(i).getName().equalsIgnoreCase(p.getName()))
 			{
-				int nCurrScore = playerList.get(i).getScore();
-				p.setScore(nCurrScore);
+                            playerList.get(i).setRoundStatus(p.getRoundStatus());
+				//int nCurrScore = playerList.get(i).getScore();
+				//p.setScore(nCurrScore);
 				//All other data already came from client. Otherwise fill in here.
-				playerList.set(i, p);
-				return true;
+				//playerList.set(i, p);
+                            return true;
 			}
 		}
 		return false;
@@ -68,5 +69,30 @@ public class MultiplayerGameCore
 	{
 		return playerList;
 	}
-	
+        
+        public void startServer()
+        {            
+            timer.schedule(gameStateManager, 3000, 3000);
+        }   
+        
+        public void setRound(int round)
+        {
+            this.round = round;
+            this.roundLeft = round;
+        }
+        
+        public void setRoundDone()
+        {
+            roundLeft--;
+        }
+        
+        public int getRound()
+        {
+            return (round - roundLeft)+1;
+        }	
+        
+        public int getRoundLeft()
+        {
+            return roundLeft;
+        }
 }
