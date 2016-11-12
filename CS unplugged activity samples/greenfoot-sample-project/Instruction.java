@@ -20,10 +20,8 @@ public class Instruction extends World
         //   super(600, 400, 1); 
 
         super(1100, 600, 1);
-        GreenfootImage pic = new GreenfootImage(600, 400);
-        pic.setColor(new Color(124,54,87));
-        pic.fill();
-        setBackground(pic);
+        GreenfootImage image = getBackground();
+        image.scale(1100, 575);
 
     }
 }
