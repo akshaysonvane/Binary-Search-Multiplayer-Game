@@ -16,7 +16,7 @@ public class Player
         
         public void notifi()
         {
-            System.out.println("notify");
+            System.out.println("User " + sUserName +" session Data Updated");
             GameSessionData gd = subject.getState().getPlayerGameData();
             sessionData.nGameState = gd.nGameState;
             sessionData.nNumberToSearch = gd.nNumberToSearch;

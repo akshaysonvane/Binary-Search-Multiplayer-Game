@@ -26,8 +26,7 @@ public class GameRunningState implements IGameState {
         gd.nGameState = 2;
         gd.nNumberToSearch = -1;
         gd.nRoundStatus = -1;
-        gd.nScore = -1;      
-        System.out.println("getdata");
+        gd.nScore = -1; 
         return gd;
     }
     

@@ -26,8 +26,7 @@ public class GameWaitingToStartState implements IGameState {
         gd.nGameState = 0;        
         gd.nRoundStatus = 0;
         gd.nScore = -1;
-        gd.nNumberToSearch = -1;   
-        System.out.println("getdata");
+        gd.nNumberToSearch = -1; 
         return gd;
     }   
 }
