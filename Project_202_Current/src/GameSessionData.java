@@ -18,5 +18,6 @@ public class GameSessionData {
     public int nGameState; //0 = waiting to start, 1=Start, 2 = running, 3 = finished
     public ArrayList<Integer> randomNumber = new ArrayList();
     public int nNumberToSearch;
+    public int round;
     
 }

@@ -38,39 +38,43 @@ public class GameStateManager extends TimerTask implements IGameStateManager {
       switch(currentState.getCurrentState())
       {
           case 0:
-              if((nCurrentTime - time) > 5000)
+              if((nCurrentTime - time) > 5000 && MultiplayerGameCore.getInstance().getRoundLeft() > 0)
               {
                   currentState = gameStartState;
-                  time = nCurrentTime;
-                  System.out.println(currentState.getCurrentState());
+                  time = nCurrentTime;                  
                   notifyObserver();
+                  System.out.println("Waiting For round " + MultiplayerGameCore.getInstance().getRound() + " To Start");
               }
               break;
           case 1:
-              if((nCurrentTime - time) > 2000)
+              if((nCurrentTime - time) > 1000)
               {
                   currentState = gameRunningState;
                   time = nCurrentTime;
+                  RandomNumberList rn = RandomNumberList.getInstance();
+                  rn.generateRandomNumbers();
                   notifyObserver();
-                  System.out.println(currentState.getCurrentState());
+                  System.out.println("Start Round");
               }
               break;
           case 2:
-              if((nCurrentTime - time) > 60000)
+              if((nCurrentTime - time) > 10000)
               {
                   currentState = gameFinishedState;
                   time = nCurrentTime;
                   notifyObserver();
-                  System.out.println(currentState.getCurrentState());
+                  System.out.println("Round Running");
               }
               break;
           case 3:
               if((nCurrentTime - time) > 5000)
               {
+                  MultiplayerGameCore.getInstance().setRoundDone();
+                  
                   currentState = gameWaitingToStartState;
                   time = nCurrentTime;
                   notifyObserver();
-                  System.out.println(currentState.getCurrentState());
+                  System.out.println("Round finished");                 
               }
               break;
       }      

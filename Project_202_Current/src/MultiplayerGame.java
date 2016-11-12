@@ -23,6 +23,8 @@ public class MultiplayerGame extends Application
 		router.attach("/JoinGame", JoinGame.class);
 		router.attach("/LeaveGame", LeaveGame.class);
 		router.attach("/SetGetPlayerStatus", GetSetPlayersStatus.class);
+                router.attach("/StartGame", StartGame.class);
+                router.attach("/StartServer", StartServer.class);
 
 		return router;
 	}

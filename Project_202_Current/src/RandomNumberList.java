@@ -5,20 +5,31 @@ import java.util.*;
 
 public class RandomNumberList
 {
+        private int BOUND = 15;
 	private int no;
         private ArrayList<Integer> arrayList = new ArrayList<>();
+        
+        private static RandomNumberList instance = null;
 
-	public RandomNumberList()
+	private RandomNumberList()
 	{		
 	}
+        
+        public static RandomNumberList getInstance() 
+	{
+            if(instance == null) {
+                    instance = new RandomNumberList();                        
+            }
+            return instance;
+   	}
 
 	public void generateRandomNumbers()
 	{
-            Random randomNumberGenerator = new Random();
+            arrayList.clear();
             
-            int BOUND = 15; // Bound value sets the number of balls
-
-            for (int i = 0; i < BOUND; i++)
+            Random randomNumberGenerator = new Random();           
+             
+            while (arrayList.size() < BOUND)
             {
                     no = randomNumberGenerator.nextInt(98) + 1;
 
@@ -33,8 +44,7 @@ public class RandomNumberList
 	}
         
         public ArrayList<Integer> getRandomNumberList()
-        {
-            generateRandomNumbers();
+        {            
             return arrayList;        
         }
         
