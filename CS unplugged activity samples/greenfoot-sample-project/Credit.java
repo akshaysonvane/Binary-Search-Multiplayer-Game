@@ -19,6 +19,6 @@ public class Credit extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1100, 600, 1);
         GreenfootImage image = getBackground();
-        image.scale(1100, 600);   
+        image.scale(1100, 575);   
     }
 }

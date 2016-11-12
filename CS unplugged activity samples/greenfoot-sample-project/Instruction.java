@@ -22,6 +22,7 @@ public class Instruction extends World
         super(1100, 600, 1);
         GreenfootImage image = getBackground();
         image.scale(1100, 575);
+        //setImage("Instructions.jpg");
 
     }
 }
