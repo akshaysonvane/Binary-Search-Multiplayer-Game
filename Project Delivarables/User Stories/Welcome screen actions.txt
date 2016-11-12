@@ -1,0 +1,49 @@
+Story: Action triggers on welcome page
+
+
+Actors:
+	
+	Roger: Player who is on welcome screen of the game
+	
+
+	
+Narrative:
+
+	As a player 
+	I want to have options of viewing instructions and before on home page
+	So that I would understand game rules and criteria
+	I want to view credits of the game
+	So that I can view the team who developed the game
+
+	
+
+Scenario 1: Roger wishes to view game instructions
+
+	Given that Roger is on welcome screen of the game
+	And the welcome screen has 'instructions' button that directs to instruction screen
+	When he clicks on the 'instructions' button
+	Then he should be displayed instructions screen
+	And there should be a 'home' button on instruction screen
+	And clicking on that button should direct him back to welcome screen
+
+
+
+Scenario 2:	Roger is eager to know who team of game developers
+
+	Given that Roger is on welcome screen of the game
+	And the welcome screen has 'credits' button that directs to credits screen
+	When he clicks on the 'credits' button
+	Then he should be displayed credits screen
+	And there should be a 'home' button on credits screen
+	And clicking on that button should direct him back to welcome screen
+
+
+Scenario 3: Roger wants to start playing
+	
+	Given that Roger is on welcome screen of the game
+	And the welcome screen has 'play game' button that directs to player game screen
+	When he clicks on the 'play game' button
+	Then he should be asked to enter name of the player
+	And the name entered by Roger must be checked if unique i.e. there should be no two 
+	player playing game with same name at any moment
+	And once server confirms the name to be unique, Roger will be directed to game play screen
