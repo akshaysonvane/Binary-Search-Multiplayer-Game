@@ -45,7 +45,7 @@ public class GameScreen extends World
         first.setLocation(65,255);
         String n0=Integer.toString(num[0]);
         addObject(new Label(n0), 65, 254);
-        PlasticCup plasticcup = new PlasticCup();
+        PlasticCup plasticcup = new PlasticCup(nm);
         addObject(plasticcup,65,247);       
         plasticcup.setLocation(65,247);
 
@@ -54,7 +54,7 @@ public class GameScreen extends World
         second.setLocation(155,254);
         String n1=Integer.toString(num[1]);
         addObject(new Label(n1), 155, 254);
-        PlasticCup plasticcup2 = new PlasticCup();
+        PlasticCup plasticcup2 = new PlasticCup(nm);
         addObject(plasticcup2,155,247);
         plasticcup2.setLocation(155,247);
 
@@ -63,7 +63,7 @@ public class GameScreen extends World
         third.setLocation(245,254);
         String n2=Integer.toString(num[2]);
         addObject(new Label(n2), 245, 254);
-        PlasticCup plasticcup3 = new PlasticCup();
+        PlasticCup plasticcup3 = new PlasticCup(nm);
         addObject(plasticcup3,245,247);
         plasticcup3.setLocation(245,247);
 
@@ -72,7 +72,7 @@ public class GameScreen extends World
         fourth.setLocation(335,254);   
         String n3=Integer.toString(num[3]);
         addObject(new Label(n3), 335, 254);
-        PlasticCup plasticcup4 = new PlasticCup();
+        PlasticCup plasticcup4 = new PlasticCup(nm);
         addObject(plasticcup4,335,247);
         plasticcup4.setLocation(335,247);
 
@@ -81,7 +81,7 @@ public class GameScreen extends World
         fifth.setLocation(425,254);
         String n4=Integer.toString(num[4]);
         addObject(new Label(n4), 425, 254);
-        PlasticCup plasticcup5 = new PlasticCup();
+        PlasticCup plasticcup5 = new PlasticCup(nm);
         addObject(plasticcup5,425,247);
         plasticcup5.setLocation(425,247);
 
@@ -90,7 +90,7 @@ public class GameScreen extends World
         sixth.setLocation(515,254);        
         String n5=Integer.toString(num[5]);
         addObject(new Label(n5), 515, 254);        
-        PlasticCup plasticcup6 = new PlasticCup();
+        PlasticCup plasticcup6 = new PlasticCup(nm);
         addObject(plasticcup6,515,247);
         plasticcup6.setLocation(515,247);
 
@@ -99,7 +99,7 @@ public class GameScreen extends World
         seventh.setLocation(605,254);
         String n6=Integer.toString(num[6]);
         addObject(new Label(n6), 605, 254);
-        PlasticCup plasticcup7 = new PlasticCup();
+        PlasticCup plasticcup7 = new PlasticCup(nm);
         addObject(plasticcup7,605,247);
         plasticcup7.setLocation(605,247);
 
@@ -108,7 +108,7 @@ public class GameScreen extends World
         eight.setLocation(695,254);
         String n7=Integer.toString(num[7]);
         addObject(new Label(n7), 695, 254);
-        PlasticCup plasticcup8 = new PlasticCup();
+        PlasticCup plasticcup8 = new PlasticCup(nm);
         addObject(plasticcup8,695,247);
         plasticcup8.setLocation(695,247);
 
@@ -117,7 +117,7 @@ public class GameScreen extends World
         ninth.setLocation(785, 254);
         String n8=Integer.toString(num[8]);
         addObject(new Label(n8), 785, 254);
-        PlasticCup plasticcup9 = new PlasticCup();
+        PlasticCup plasticcup9 = new PlasticCup(nm);
         addObject(plasticcup9,785,247);
         plasticcup9.setLocation(785,247);
 
@@ -126,7 +126,7 @@ public class GameScreen extends World
         tenth.setLocation(875, 254);
         String n9=Integer.toString(num[9]);
         addObject(new Label(n9), 875, 254);
-        PlasticCup plasticcup10 = new PlasticCup();
+        PlasticCup plasticcup10 = new PlasticCup(nm);
         addObject(plasticcup10,875,247);
         plasticcup10.setLocation(875,247);
 
@@ -135,7 +135,7 @@ public class GameScreen extends World
         eleventh.setLocation(965, 254);
         String n10=Integer.toString(num[10]);
         addObject(new Label(n10), 965, 254);
-        PlasticCup plasticcup11 = new PlasticCup();
+        PlasticCup plasticcup11 = new PlasticCup(nm);
         addObject(plasticcup11,965,247);
         plasticcup11.setLocation(965,247);
 
@@ -143,8 +143,8 @@ public class GameScreen extends World
         addObject(twelth, 1055, 260);
         twelth.setLocation(1055, 254);
         String n11=Integer.toString(num[11]);
-        addObject(new Label(n0), 1055, 254);
-        PlasticCup plasticcup12 = new PlasticCup();
+        addObject(new Label(n11), 1055, 254);
+        PlasticCup plasticcup12 = new PlasticCup(nm);
         addObject(plasticcup12,1055,247);
         plasticcup12.setLocation(1055,247);
 

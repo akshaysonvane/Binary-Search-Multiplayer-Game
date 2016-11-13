@@ -7,7 +7,7 @@
 public class NumberModel  
 {
     private int no=0;
-    private int[] numbers= new int[8];
+    private int[] numbers= new int[12];
     /*
     public int getX()
     {
