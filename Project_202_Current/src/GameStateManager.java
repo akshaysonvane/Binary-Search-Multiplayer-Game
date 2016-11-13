@@ -1,21 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package multiplayergameServer;
 
 import java.util.ArrayList;
-import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- *
- * @author sunil
- */
 public class GameStateManager extends TimerTask implements IGameStateManager {
     
-    private ArrayList<Player> player = new ArrayList();
+    private ArrayList<Player> player = new ArrayList<Player>();
     
     IGameState gameFinishedState = new GameFinishedState();
     IGameState gameRunningState = new GameRunningState();
