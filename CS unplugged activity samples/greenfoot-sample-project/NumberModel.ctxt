@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=NumberModel
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ NumberModel\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=no
+comment1.target=void\ set_Numbers(int[])
+comment1.text=\r\n\ \ \ \ public\ int\ getX()\r\n\ \ \ \ {\r\n\ \ \ \ return\ x;\r\n\ \ \ \ }\r\n\r\n\ \ \ \ public\ void\ setX(int\ x)\r\n\ \ \ \ {\r\n\ \ \ \ this.x\ \=\ x;\r\n\ \ \ \ }\r\n\r\n\ \ \ \ public\ int\ getY()\r\n\ \ \ \ {\r\n\ \ \ \ return\ y;\r\n\ \ \ \ }\r\n\r\n\ \ \ \ public\ void\ setY(int\ y)\r\n\ \ \ \ {\r\n\ \ \ \ this.y\ \=\ y;\r\n\ \ \ \ }\r\n
+comment2.params=
+comment2.target=int[]\ get_Number()
+numComments=3

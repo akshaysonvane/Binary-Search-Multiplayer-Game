@@ -19,8 +19,16 @@ public class PlasticCup extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {
-        if(Greenfoot.mouseClicked(this))
+    {      if(Greenfoot.mouseClicked(this))
+        {
+            MouseInfo mouse = Greenfoot.getMouseInfo();
+            if (mouse != null) {
+                int x = mouse.getX();
+                int y = mouse.getY();
+                System.out.println(x + " "  + y);
+
+            }
             getWorld().removeObject(this);
+        }
     }    
 }
