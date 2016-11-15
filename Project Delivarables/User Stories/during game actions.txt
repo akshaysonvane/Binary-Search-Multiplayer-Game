@@ -1,0 +1,89 @@
+Story: Game session play actions
+
+Actors:
+	Roger: New player who has just connected to the game.
+	Sam, Mike: Players who are already playing the game
+	Server: Game engine running on server machine
+	
+
+Narrative: 
+	As a player
+	I wish to see list of players connected to game 
+	So that I know how many players I am playing with
+	I wish to see live score updates of all players on my game screen
+	So that I can know what is my position on scoreboard during the game
+	
+	
+	
+Scenario 1:	Roger has entered the game by connecting to the server
+
+	Given that game server was started by admin 
+	And Sam, Mike joined the game and started playing
+	When Roger joins game in such situation 
+	Then Roger should be connected with Sam and Mike in next round of the game
+	And there should be at least 5 rounds during each game
+	So that new players can be start playing without long delay
+	And server should maintain the list of players connected to game
+	So that it can ensure no new player enters duplicate of existing name. 
+	
+	
+Scenario 2: Roger started playing the game along Sam and Mike
+
+	Given that Roger, Sam and Mike are playing on the same game server
+	And Roger has just joined the game
+	When Roger starts playing in such situation
+	Then Sam and Mike must be notified about the new player Roger
+	And each player much be able to see list of players on game screen
+	So that they can know how many players are they playing against
+	
+
+Scenario 3: Roger exits game
+
+	Given that Roger is playing game with Sam and Mike on same server
+	And Roger has quit game 
+	When Roger quits game in such situations
+	Then Roger's player name should be removed from list of players (which is maintained by server)
+	And Sam and Mike's game screen should be updated with new list of players in the game
+	So that they know when a player quits game
+	
+	
+Scenario 4: Roger, Sam and Mike have finished playing round 5
+
+	Given that Roger, Sam and Mike have reached end of round 5(considering that round 5 being last round of the game)
+	And they are directed to scoreboard screen
+	When they at such scenario
+	Then they should cumulative points of all rounds
+	And there should be 'Play Again' 
+	So that those who wish to play again can start a session
+	And there should be 'Exit' button on that screen
+	So that those who wish to exit will leave the game
+	
+	
+Scenario 5:	Sam clicks on Play again on score board screen
+	
+	Given that Sam was on scoreboard screen
+	And Sam clicks 'Play Again' button
+	When certain scenario prevails
+	Then server starts new session with Sam 
+	And waits for certain time for other players to make a decision
+	
+	
+Scenario6: Sam clicks on 'Exit' button on scoreboard screen
+	
+	Given that Sam was on scoreboard screen
+	And Sam clicks 'Exit' button
+	When certain scenario prevails
+	Then server removes Sam from list of players 
+	And disconnects Sam from the game
+	And Sam is directed to home screen
+	
+
+Scenario 6: Roger fails to make decision on scoreboard screen
+
+	Given that Roger is on scoreboard screen
+	And fails to make a decision within 10 seconds (considering that server wait time to start new session is 10 seconds)
+	When certain scenario prevails
+	Then server removes Roger from list of players
+	And disconnects Roger from the game
+	And Roger is directed to home screen
+	
