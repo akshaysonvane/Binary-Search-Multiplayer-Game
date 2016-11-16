@@ -32,5 +32,12 @@ public class MenuScreen extends World
         addObject(instructions,537,457);
         Credits credits = new Credits();
         addObject(credits,535,531);
+        EnterName entername = new EnterName();
+        addObject(entername,539,337);
+        playgame.setLocation(537,399);
+        instructions.setLocation(538,469);
+        playgame.setLocation(536,403);
+        entername.setLocation(532,337);
+        entername.setLocation(533,337);
     }
 }
