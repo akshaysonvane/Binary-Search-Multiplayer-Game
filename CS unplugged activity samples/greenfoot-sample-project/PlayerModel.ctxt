@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=PlayerModel
+comment1.params=
+comment1.target=java.util.List\ getPlayers()
+comment1.text=\r\n\ \r\n\ @return\r\n\ \ \ \ \ The\ players\r\n
+comment2.params=players
+comment2.target=void\ setPlayers(java.util.List)
+comment2.text=\r\n\ \r\n\ @param\ players\r\n\ \ \ \ \ The\ players\r\n
+comment3.params=
+comment3.target=java.lang.Boolean\ getResult()
+comment3.text=\r\n\ \r\n\ @return\r\n\ \ \ \ \ The\ result\r\n
+comment4.params=result
+comment4.target=void\ setResult(java.lang.Boolean)
+comment4.text=\r\n\ \r\n\ @param\ result\r\n\ \ \ \ \ The\ Result\r\n
+numComments=5

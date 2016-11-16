@@ -19,6 +19,10 @@ public class Test
 //			System.out.print(object[i] + " ");
 //		}
 		
+		RandomNumberList rn = RandomNumberList.getInstance();
+		//rn.generateRandomNumbers();
+		System.out.println(rn.getNumberToSearch());
+		System.out.println(rn.getRandomNumberList());
 	}
 
 }

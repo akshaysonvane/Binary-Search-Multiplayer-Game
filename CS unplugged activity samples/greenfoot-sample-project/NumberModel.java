@@ -6,42 +6,37 @@
  */
 public class NumberModel  
 {
-    private int no=0;
-    private int[] numbers= new int[12];
-    /*
-    public int getX()
-    {
-    return x;
-    }
+    private static NumberModel numberModel = null;
 
-    public void setX(int x)
+    public static NumberModel getInstance()
     {
-    this.x = x;
-    }
-
-    public int getY()
-    {
-    return y;
-    }
-
-    public void setY(int y)
-    {
-    this.y = y;
-    }
-     */
-    
-
-    public void set_Numbers(int[] no)
-    {
-      
-        this.numbers=no;
-       /* for(int i=0; i<numbers.length; i++)
+        if(numberModel == null)
         {
-            System.out.println(numbers[i]);
-        }*/
+            numberModel = new NumberModel();
+        }
+
+        return numberModel;
     }
-    
-    public int[] get_Number(){
+
+    private int no = 0;
+    private Integer[] numbers = new Integer[12];
+
+    public void setNo(int no)
+    {
+        this.no = no;
+    }
+
+    public int getNo()
+    {
+        return no;
+    }
+
+    public void setNumbers(Integer[] no)
+    {
+        this.numbers=no;
+    }
+
+    public Integer[] getNumber(){
         return numbers;
     }
 }
