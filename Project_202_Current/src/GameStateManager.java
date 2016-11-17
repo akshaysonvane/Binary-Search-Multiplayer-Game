@@ -33,6 +33,7 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 			case 0:
 				if ((nCurrentTime - time) > 5000 && MultiplayerGameCore.getInstance().getRoundLeft() > 0)
 				{
+					System.out.println("Case 0");
 					currentState = gameStartState;
 					time = nCurrentTime;
 					notifyObserver();
@@ -44,6 +45,7 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 			case 1:
 				if ((nCurrentTime - time) > 1000)
 				{
+					System.out.println("Case 1");
 					currentState = gameRunningState;
 					time = nCurrentTime;
 					RandomNumberList rn = RandomNumberList.getInstance();
@@ -54,8 +56,9 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 				break;
 			// 2 = running
 			case 2:
-				if ((nCurrentTime - time) > 10000)
+				if ((nCurrentTime - time) > 100000)
 				{
+					System.out.println("Case 2");
 					currentState = gameFinishedState;
 					time = nCurrentTime;
 					notifyObserver();
@@ -66,6 +69,7 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 			case 3:
 				if ((nCurrentTime - time) > 5000)
 				{
+					System.out.println("Case 3");
 					MultiplayerGameCore.getInstance().setRoundDone();
 
 					currentState = gameWaitingToStartState;

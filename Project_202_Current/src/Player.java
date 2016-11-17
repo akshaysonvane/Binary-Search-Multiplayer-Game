@@ -27,7 +27,7 @@ public class Player
 		if (gd.nScore >= 0)
 			sessionData.nScore = gd.nScore;
 
-		if (gd.randomNumber.size() > 0)
+		if (gd.randomNumber != null && gd.randomNumber.size() > 0)
 			sessionData.randomNumber = gd.randomNumber;
 	}
 

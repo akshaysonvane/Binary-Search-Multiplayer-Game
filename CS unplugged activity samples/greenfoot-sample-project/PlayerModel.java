@@ -4,8 +4,9 @@ import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class PlayerModel {
+import java.util.*;
 
+public class PlayerModel {
 
     @SerializedName("players")
     @Expose
@@ -50,4 +51,15 @@ public class PlayerModel {
         this.result = result;
     }
 
+    @Override
+    public String toString()
+    {
+        String str = "";
+        Iterator<Player> itr = players.iterator();
+        while(itr.hasNext()) {
+            Player p = itr.next();
+            System.out.print(p.getName() + " " + p.getScore());
+        }
+        return str;
+    }
 }

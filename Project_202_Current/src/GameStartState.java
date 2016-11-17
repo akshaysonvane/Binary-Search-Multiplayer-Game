@@ -12,7 +12,7 @@ public class GameStartState implements IGameState
     }
     
     public GameSessionData getPlayerGameData()
-    {   
+    {
     	rn.generateRandomNumbers();
         gd.nGameState = 1;        
         gd.nRoundStatus = -1;

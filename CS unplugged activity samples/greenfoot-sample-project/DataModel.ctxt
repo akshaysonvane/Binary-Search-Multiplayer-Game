@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=DataModel
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ DataModel\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=DataModel\ getInstance()
 comment2.params=
 comment2.target=java.lang.String\ getUserId()
 comment3.params=userId
 comment3.target=void\ setUserId(java.lang.String)
-numComments=4
+comment4.params=
+comment4.target=PlayerModel\ getPlayerModel()
+comment5.params=playerModel
+comment5.target=void\ setPlayerModel(PlayerModel)
+numComments=6

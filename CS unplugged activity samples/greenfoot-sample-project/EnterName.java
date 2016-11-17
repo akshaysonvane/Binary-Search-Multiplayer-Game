@@ -13,8 +13,17 @@ public class EnterName extends Actor
     {
         if(Greenfoot.mouseClicked(this))
         {
-            String userId = JOptionPane.showInputDialog("Enter name");
-            DataModel.getInstance().setUserId(userId);
+            // String userId = JOptionPane.showInputDialog("Enter name");
+            // DataModel.getInstance().setUserId(userId);
+            
+            if(Utils.getInstance().getGameHost())
+            {
+                Utils.getInstance().setGameHost(false);
+            }
+            else
+            {
+                Utils.getInstance().setGameHost(true);
+            }
         }
     }    
 }

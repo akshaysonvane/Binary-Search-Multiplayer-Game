@@ -17,11 +17,13 @@ public class GetSetPlayersStatus extends ServerResource
 		JSONObject json = new JSONObject(entity.getText());
 		String userId = (String) json.get("userId");
 		Integer ss = (Integer) json.get("roundStatus");
+		Integer score = (Integer) json.get("score");
 		
 		
 		Player p = new Player();
 		p.setName(userId);
 		p.setRoundStatus(ss);
+		p.setScore(score);
 
 		JSONObject obj = new JSONObject();
 		obj.put("Result", MultiplayerGameCore.getInstance().updatePlayerData(p));

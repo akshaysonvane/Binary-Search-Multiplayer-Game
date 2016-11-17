@@ -23,7 +23,7 @@ public class PlayGame extends Actor
 {
     private boolean hover=false;
     private boolean changeWorld = true;
-    
+
     Timer timer = new Timer();
     TimerTask task;
 
@@ -55,29 +55,14 @@ public class PlayGame extends Actor
                 {
                     if(startGame())
                     {
-                        
+
                         task = new TimerTask() {
-                                @Override
-                                public void run() {
-                                    getStatus();
-                                }
-                            };
+                            @Override
+                            public void run() {
+                                getStatus();
+                            }
+                        };
                         timer.schedule(task, 0,1000);
-                        // for(int i=0; i<20; i++)
-                        // {
-                        // if(!breakLoop)
-                        // {
-                        // getStatus();
-                        // try{
-                        // Thread.sleep(1000);
-                        // }
-                        // catch(Exception e){e.printStackTrace();}   
-                        // }
-                        // else
-                        // {
-                        // break;
-                        // }
-                        // }
                     }
                     else
                     {
@@ -101,24 +86,31 @@ public class PlayGame extends Actor
 
     public boolean startServer()
     {
-        boolean hasStarted = false;
-        String url = Utils.BASE_URL + "StartServer";
-        ClientResource client = new ClientResource(url); 
-        JSONObject json = null;
-        Representation result_string = client.post(MediaType.APPLICATION_JSON);
-        try {
-            json = new JSONObject(result_string.getText());
-            System.out.println(json.get("Result"));
-            if(json.get("Result").toString().equalsIgnoreCase("true"))
-            {
-                hasStarted = true;
+        if(Utils.getInstance().getGameHost())
+        {
+            boolean hasStarted = false;
+            String url = Utils.BASE_URL + "StartServer";
+            ClientResource client = new ClientResource(url); 
+            JSONObject json = null;
+            Representation result_string = client.post(MediaType.APPLICATION_JSON);
+            try {
+                json = new JSONObject(result_string.getText());
+                System.out.println(json.get("Result"));
+                if(json.get("Result").toString().equalsIgnoreCase("true"))
+                {
+                    hasStarted = true;
+                }
             }
-        }
-        catch (Exception e) {
-        }
-        client.release();
+            catch (Exception e) {
+            }
+            client.release();
 
-        return hasStarted;
+            return hasStarted;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public boolean joinGame()
@@ -147,26 +139,33 @@ public class PlayGame extends Actor
 
     public boolean startGame()
     {
-        boolean hasStarted = false;
-        String url = Utils.BASE_URL + "StartGame";
-        ClientResource client = new ClientResource(url); 
-        JSONObject json = null;
-        JSONObject json1 = new JSONObject();
-        json1.put("round", 1);
-        Representation result_string = client.post(new JsonRepresentation(json1), MediaType.APPLICATION_JSON);
-        try {
-            json = new JSONObject(result_string.getText());
-            System.out.println(json.get("Result"));
-            if(json.get("Result").toString().equalsIgnoreCase("true"))
-            {
-                hasStarted = true;
+        if(Utils.getInstance().getGameHost())
+        {
+            boolean hasStarted = false;
+            String url = Utils.BASE_URL + "StartGame";
+            ClientResource client = new ClientResource(url); 
+            JSONObject json = null;
+            JSONObject json1 = new JSONObject();
+            json1.put("round", 1);
+            Representation result_string = client.post(new JsonRepresentation(json1), MediaType.APPLICATION_JSON);
+            try {
+                json = new JSONObject(result_string.getText());
+                System.out.println(json.get("Result"));
+                if(json.get("Result").toString().equalsIgnoreCase("true"))
+                {
+                    hasStarted = true;
+                }
             }
-        }
-        catch (Exception e) {
-        }
-        client.release();
+            catch (Exception e) {
+            }
+            client.release();
 
-        return hasStarted;
+            return hasStarted;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public void getStatus()
@@ -176,13 +175,15 @@ public class PlayGame extends Actor
         JSONObject json = null;
         JSONObject json3 = new JSONObject();
         json3.put("userId", DataModel.getInstance().getUserId());
-        json3.put("roundStatus", 0);
+        json3.put("roundStatus", RoundModel.getInstance().getRoundStatus());
+        json3.put("score", RoundModel.getInstance().getClicks());
         Representation result_string = client.post(new JsonRepresentation(json3), MediaType.APPLICATION_JSON);
         try {
             json = new JSONObject(result_string.getText());
             System.out.println(json);
             Gson gson = new Gson();
             PlayerModel pm = gson.fromJson(json.toString(), PlayerModel.class);
+            DataModel.getInstance().setPlayerModel(pm);
             if(pm.getPlayers().get(0).getGameState() == 1)
             {
                 NumberModel.getInstance().setNo(pm.getPlayers().get(0).getNumberToSearch());

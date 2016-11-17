@@ -1,13 +1,8 @@
-/**
- * Write a description of class DataModel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class DataModel  
+public class DataModel
 {
     private String userId = null;
     private static DataModel dataModel = null;
+    private static PlayerModel playerModel = null;
 
     public static DataModel getInstance()
     {
@@ -27,5 +22,15 @@ public class DataModel
     public void setUserId(String userId)
     {
         this.userId = userId;
+    }
+
+    public PlayerModel getPlayerModel()
+    {
+        return playerModel;
+    }
+
+    public void setPlayerModel(PlayerModel playerModel)
+    {
+        this.playerModel = playerModel;
     }
 }
