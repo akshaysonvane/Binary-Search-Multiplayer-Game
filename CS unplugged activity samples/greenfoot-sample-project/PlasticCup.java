@@ -4,7 +4,6 @@ public class PlasticCup extends Actor
 {
     Integer[] array= new Integer[12];
     NumberModel nm;
-    int flag = 0;
 
     public PlasticCup()
     {
@@ -108,6 +107,7 @@ public class PlasticCup extends Actor
 
     public void checkNumber(int index)
     {
+        //compare number to search with number clicked on
         if(array[index] == nm.getNo())
         {
             //Game Finished

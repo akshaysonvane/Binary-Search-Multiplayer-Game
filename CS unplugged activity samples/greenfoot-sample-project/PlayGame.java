@@ -1,6 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import com.google.gson.Gson;
 
 import java.util.Timer;
@@ -41,49 +42,50 @@ public class PlayGame extends Actor
 
         if(Greenfoot.mouseClicked(this))
         {
+            //Get userId and store in datamodel for suture usge
             String userId = JOptionPane.showInputDialog("Please Enter name");
             DataModel.getInstance().setUserId(userId);
 
+            //TODO Required to smooth out UI/UX ??
             try{
                 Thread.sleep(500);
             }
             catch(Exception e){e.printStackTrace();}
 
+            //All calls apart from StartGame are sequiantial as each call is a dependency for the next call.
             if(startServer())
             {
                 if(joinGame())
                 {
                     if(startGame())
                     {
-
                         task = new TimerTask() {
                             @Override
                             public void run() {
                                 getStatus();
                             }
                         };
+                        //Timed thread runs every 1 second.
                         timer.schedule(task, 0,1000);
                     }
                     else
                     {
-                        //TODO
-                        System.out.println("Cannot start game.");
+                        JOptionPane.showMessageDialog(new JPanel(), "Cannot start game.", "Error", JOptionPane.ERROR_MESSAGE);
                     }
                 }
                 else
                 {
-                    //TODO
-                    System.out.println("Cannot join game.");
+                    JOptionPane.showMessageDialog(new JPanel(), "Cannot join game.", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
             else
             {
-                //TODO
-                System.out.println("Cannot connect to server.");
+                JOptionPane.showMessageDialog(new JPanel(), "Cannot connect to server.", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
 
+    //Will not be called if game mode is connect game
     public boolean startServer()
     {
         if(Utils.getInstance().getGameHost())
@@ -92,8 +94,10 @@ public class PlayGame extends Actor
             String url = Utils.BASE_URL + "StartServer";
             ClientResource client = new ClientResource(url); 
             JSONObject json = null;
-            Representation result_string = client.post(MediaType.APPLICATION_JSON);
-            try {
+
+            try 
+            {
+                Representation result_string = client.post(MediaType.APPLICATION_JSON);
                 json = new JSONObject(result_string.getText());
                 System.out.println(json.get("Result"));
                 if(json.get("Result").toString().equalsIgnoreCase("true"))
@@ -101,7 +105,9 @@ public class PlayGame extends Actor
                     hasStarted = true;
                 }
             }
-            catch (Exception e) {
+            catch (Exception e) 
+            {
+                e.printStackTrace();
             }
             client.release();
 
@@ -115,28 +121,33 @@ public class PlayGame extends Actor
 
     public boolean joinGame()
     {
-        boolean hasStarted = false;
+        boolean hasJoined = false;
         String url = Utils.BASE_URL + "JoinGame";
         ClientResource client = new ClientResource(url); 
         JSONObject json2 = new JSONObject();
         JSONObject json = null;
         json2.put("userId", DataModel.getInstance().getUserId());
-        Representation result_string = client.post(new JsonRepresentation(json2), MediaType.APPLICATION_JSON);
-        try {
+
+        try 
+        {
+            Representation result_string = client.post(new JsonRepresentation(json2), MediaType.APPLICATION_JSON);
             json = new JSONObject(result_string.getText());
             System.out.println(json.get("Result"));
             if(json.get("Result").toString().equalsIgnoreCase("true"))
             {
-                hasStarted = true;
+                hasJoined = true;
             }
         }
-        catch (Exception e) {
+        catch (Exception e) 
+        {
+            e.printStackTrace();
         }
         client.release();
 
-        return hasStarted;
+        return hasJoined;
     }
 
+    //Will not be called if game mode is connect game
     public boolean startGame()
     {
         if(Utils.getInstance().getGameHost())
@@ -147,8 +158,10 @@ public class PlayGame extends Actor
             JSONObject json = null;
             JSONObject json1 = new JSONObject();
             json1.put("round", 1);
-            Representation result_string = client.post(new JsonRepresentation(json1), MediaType.APPLICATION_JSON);
-            try {
+
+            try 
+            {
+                Representation result_string = client.post(new JsonRepresentation(json1), MediaType.APPLICATION_JSON);
                 json = new JSONObject(result_string.getText());
                 System.out.println(json.get("Result"));
                 if(json.get("Result").toString().equalsIgnoreCase("true"))
@@ -156,7 +169,9 @@ public class PlayGame extends Actor
                     hasStarted = true;
                 }
             }
-            catch (Exception e) {
+            catch (Exception e) 
+            {
+                e.printStackTrace();
             }
             client.release();
 
@@ -177,8 +192,10 @@ public class PlayGame extends Actor
         json3.put("userId", DataModel.getInstance().getUserId());
         json3.put("roundStatus", RoundModel.getInstance().getRoundStatus());
         json3.put("score", RoundModel.getInstance().getClicks());
-        Representation result_string = client.post(new JsonRepresentation(json3), MediaType.APPLICATION_JSON);
-        try {
+
+        try 
+        {
+            Representation result_string = client.post(new JsonRepresentation(json3), MediaType.APPLICATION_JSON);
             json = new JSONObject(result_string.getText());
             System.out.println(json);
             Gson gson = new Gson();
@@ -202,7 +219,9 @@ public class PlayGame extends Actor
                 timer.cancel();
             }
         }
-        catch (Exception e) {
+        catch (Exception e) 
+        {
+            e.printStackTrace();
         }
         client.release();
     }
