@@ -1,28 +1,28 @@
-Story 1: Game session play actions
+Story: Game session play actions
 
-Actors :
-	Roger : New player who has just connected to the game.
-	Sam, Mike : Players who are already playing the game
-	Server : Game engine running on server machine
+Actors:
+	Roger: New player who has just connected to the game.
+	Sam, Mike: Players who are already playing the game
+	Server: Game engine running on server machine
 	
 
-Narrative : 
+Narrative: 
 	As a player
 	I wish to see list of players connected to game 
-	So that i know how many players i am playing with
+	So that I know how many players I am playing with
 	I wish to see live score updates of all players on my game screen
-	So that i can know what is my position on scoreboard during the game
+	So that I can know what is my position on scoreboard during the game
 	
 	
 	
 Scenario 1:	Roger has entered the game by connecting to the server
 
 	Given that game server was started by admin 
-	And Sam,Mike joined the game and started playing
+	And Sam, Mike joined the game and started playing
 	When Roger joins game in such situation 
 	Then Roger should be connected with Sam and Mike in next round of the game
-	And there should be atleast 5 rounds during each game
-	So that new players can be start playing with out long delay
+	And there should be at least 5 rounds during each game
+	So that new players can be start playing without long delay
 	And server should maintain the list of players connected to game
 	So that it can ensure no new player enters duplicate of existing name. 
 	
@@ -44,7 +44,7 @@ Scenario 3: Roger exits game
 	When Roger quits game in such situations
 	Then Roger's player name should be removed from list of players (which is maintained by server)
 	And Sam and Mike's game screen should be updated with new list of players in the game
-	So that they know when a players quits game
+	So that they know when a player quits game
 	
 	
 Scenario 4: Roger, Sam and Mike have finished playing round 5
@@ -52,7 +52,7 @@ Scenario 4: Roger, Sam and Mike have finished playing round 5
 	Given that Roger, Sam and Mike have reached end of round 5(considering that round 5 being last round of the game)
 	And they are directed to scoreboard screen
 	When they at such scenario
-	Then they schould cummulative points of all rounds
+	Then they should cumulative points of all rounds
 	And there should be 'Play Again' 
 	So that those who wish to play again can start a session
 	And there should be 'Exit' button on that screen
@@ -68,57 +68,22 @@ Scenario 5:	Sam clicks on Play again on score board screen
 	And waits for certain time for other players to make a decision
 	
 	
-Scenario6: Sam clciks on 'Exit' button on scoreboard screen
+Scenario6: Sam clicks on 'Exit' button on scoreboard screen
 	
 	Given that Sam was on scoreboard screen
 	And Sam clicks 'Exit' button
 	When certain scenario prevails
-	Then server removes sam from list of players 
+	Then server removes Sam from list of players 
 	And disconnects Sam from the game
 	And Sam is directed to home screen
 	
 
-Scenario 6: Roger fails to make decison on scoreboard screen
+Scenario 6: Roger fails to make decision on scoreboard screen
 
 	Given that Roger is on scoreboard screen
-	And fails to make a decision within 10 seconds(considering that server wait time to start new session is 10 seconds)
+	And fails to make a decision within 10 seconds (considering that server wait time to start new session is 10 seconds)
 	When certain scenario prevails
 	Then server removes Roger from list of players
 	And disconnects Roger from the game
 	And Roger is directed to home screen
-	
-
-	
-	
-Story 2: During game user view of sessions.
-
-
-Actors:	
-	Roger: User already playing the game
-	
-
-Narrative : 
-	As a player
-	I wish to see messages on screen
-	So that i know the status of the game
-	I wish to see round status of the game
-	So that i can know what is the round status of the game
-
-	
-Scenario 1: Roger view the message of server waiting between the rounds
-
-	Given that Roger is playing the game
-	And the round has ended 
-	When certain situation prevails
-	Then Roger should view 'next round loading message on screen'
-	And message should dissapear when the next round starts
-	
-	
-Scenario 2: Roger viewing round status on screen
-
-	Given that Roger is connected to the game
-	And Roger is playing the game
-	when certain situation prevails
-	Then Roger should view the curent round status on the screen 
-	And the round status should change as the round changes.
 	

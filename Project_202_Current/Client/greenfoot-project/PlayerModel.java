@@ -6,7 +6,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.*;
 
-public class PlayerModel {
+public class PlayerModel implements IPlayerIterator
+{
 
     @SerializedName("players")
     @Expose
@@ -58,8 +59,14 @@ public class PlayerModel {
         Iterator<Player> itr = players.iterator();
         while(itr.hasNext()) {
             Player p = itr.next();
-            System.out.print(p.getName() + " " + p.getScore());
+            str += p.getName() + " " + p.getScore();
         }
         return str;
+    }
+
+    @Override
+    public Iterator createIterator()
+    {
+        return players.iterator();
     }
 }

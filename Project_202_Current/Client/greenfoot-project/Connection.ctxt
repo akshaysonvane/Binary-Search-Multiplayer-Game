@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Connection
+comment1.params=
+comment1.target=boolean\ startServer()
+comment2.params=
+comment2.target=boolean\ joinGame()
+comment3.params=
+comment3.target=boolean\ startGame()
+comment4.params=timer
+comment4.target=void\ getStatus(java.util.Timer)
+numComments=5

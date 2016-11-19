@@ -48,8 +48,8 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 					System.out.println("Case 1");
 					currentState = gameRunningState;
 					time = nCurrentTime;
-					RandomNumberList rn = RandomNumberList.getInstance();
-					rn.generateRandomNumbers();
+//					RandomNumberList rn = RandomNumberList.getInstance();
+//					rn.generateRandomNumbers();
 					notifyObserver();
 					System.out.println("Start Round");
 				}
