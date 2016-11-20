@@ -23,6 +23,9 @@ public class Instruction extends World
         GreenfootImage image = getBackground();
         image.scale(1100, 575);
         //setImage("Instructions.jpg");
+        
+        Back_to_Menu b= new Back_to_Menu();
+        addObject(b,50,30);
 
     }
 }

@@ -20,5 +20,9 @@ public class Credit extends World
         super(1100, 600, 1);
         GreenfootImage image = getBackground();
         image.scale(1100, 575);   
+        
+        
+        Back_to_Menu_from_Credit b1= new Back_to_Menu_from_Credit();
+        addObject(b1,50,30);
     }
 }
