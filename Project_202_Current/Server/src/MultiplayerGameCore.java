@@ -61,6 +61,7 @@ public class MultiplayerGameCore
 			if (playerList.get(i).getName().equalsIgnoreCase(p.getName()))
 			{
 				playerList.get(i).setRoundStatus(p.getRoundStatus());
+                                playerList.get(i).setScore(p.getScore());
 				// int nCurrScore = playerList.get(i).getScore();
 				// p.setScore(nCurrScore);
 				// All other data already came from client. Otherwise fill in
