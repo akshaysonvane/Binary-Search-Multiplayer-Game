@@ -13,7 +13,7 @@ public class GameStartState implements IGameState
     
     public GameSessionData getPlayerGameData()
     {
-    	rn.generateRandomNumbers();
+    	//rn.generateRandomNumbers();
         gd.nGameState = 1;        
         gd.nRoundStatus = -1;
         gd.nScore = -1;

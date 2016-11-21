@@ -19,7 +19,9 @@ public class Player
 		System.out.println("User " + sUserName + " session Data Updated");
 		GameSessionData gd = subject.getState().getPlayerGameData();
 		sessionData.nGameState = gd.nGameState;
-		sessionData.nNumberToSearch = gd.nNumberToSearch;
+                
+                if(gd.nNumberToSearch >= 0)
+                    sessionData.nNumberToSearch = gd.nNumberToSearch;
 
 		if (gd.nRoundStatus >= 0)
 			sessionData.nRoundStatus = gd.nRoundStatus;
