@@ -24,7 +24,7 @@ public class Instruction extends World
         image.scale(1100, 575);
         //setImage("Instructions.jpg");
         
-        Back_to_Menu b= new Back_to_Menu();
+        BackMenu b= new BackMenu();
         addObject(b,50,30);
 
     }

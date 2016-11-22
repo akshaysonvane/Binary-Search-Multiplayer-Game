@@ -22,7 +22,7 @@ public class Credit extends World
         image.scale(1100, 575);   
         
         
-        Back_to_Menu_from_Credit b1= new Back_to_Menu_from_Credit();
+        BackMenu b1= new BackMenu();
         addObject(b1,50,30);
     }
 }
