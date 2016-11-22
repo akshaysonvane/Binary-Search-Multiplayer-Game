@@ -137,6 +137,7 @@ public class PlayGame extends Actor
         if(pm.getPlayers().get(0).getGameState() == 3)
         {
             timer.cancel();
+            Greenfoot.setWorld(new EndScreen());
         }
     }
 }

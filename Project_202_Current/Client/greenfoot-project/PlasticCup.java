@@ -112,7 +112,7 @@ public class PlasticCup extends Actor
         {
             //Game Finished
             RoundModel.getInstance().setRoundStatus(1);
-            Greenfoot.setWorld(new EndScreen());
+            // Greenfoot.setWorld(new EndScreen());
         }
     }
 }

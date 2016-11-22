@@ -153,7 +153,7 @@ public class GameScreen extends World
         Message message = new Message();
         addObject(message,361,431);
 
-        To_display_score score= new To_display_score();
+        DispScore score= new DispScore();
         addObject(score,761,431);
         String score1="";
         addObject(new Label(DataModel.getInstance().getUserId()+" your score is : "),665, 440);
