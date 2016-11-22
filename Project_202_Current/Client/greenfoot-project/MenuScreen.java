@@ -15,10 +15,10 @@ public class MenuScreen extends World
      */
     public MenuScreen()
     {    
-        super(1100, 600, 1);
+        super(1100, 575, 1);
         
         GreenfootImage image = getBackground();
-        image.scale(1100, 600);
+        image.scale(1100, 575);
         
         prepare();
     }
