@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Utils
+comment1.params=
+comment1.target=Utils\ getInstance()
+comment2.params=
+comment2.target=boolean\ getGameHost()
+comment3.params=gameHost
+comment3.target=void\ setGameHost(boolean)
+numComments=4

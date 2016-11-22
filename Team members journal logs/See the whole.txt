@@ -1,0 +1,58 @@
+Extreme Programming (XP) Value: See the whole
+
+Week 1
+Practicing XP means putting the team above all else and achieving the team's goals is your primary objective with achieving individual goals a secondary objective  
+obtained via the former. I like the fact that each team member picks his or her own core value of which they will act as guardians making sure the team as a whole  
+practices that value throughout the project.
+Emphasizing this, when we had our first team meeting and each picked a value, I started visualizing the members not as individual cogwheels but as part of the same  
+clockwork which if well oiled, will always tell the time perfectly. My task for me is cut out, I will strive towards making sure the team works in synchronization to  
+achieving the team's objectives and in the process, they achieve their own objectives as well. Also, when the team is bogged down or stuck at some point on a certain  
+problem or backlog, I will make sure we step back for a bit and see the project as a whole. To see the backlog or problem as part of the larger picture, which may  
+provide better insights into solving the problem. Also, we are developing a game which is going to be played by children and will teach them something valuable. I will make sure that this core principle is always on the back of all our minds so that it inspires creative influences in our programming of the game and understanding of the task at hand.
+
+Week 2
+This week was significant as we got to know a little bit more about each other's strengths and weaknesses, charting out a plan to assign work to each other based on our strengths and assist each other based on the latter. We debated for quite a while on selection of the game idea, game flow and division of future responsibilities. While supporting and taking part in this team debate, we lost the plot a few times i.e. lost the main objective which is to design a game based on the backbone of a  
+core CS algorithm. I worked towards identifying when this happened and then brought the discussion back on track. I am now trying to understand if it is possible for  
+me to if not eliminate with time, then at least be able to minimize such instances to increase future team discussions overall productivity.
+As for my own case, I am trying to get everyone to visualize the entire task and the first step towards this is achieved by each one of us expressing their own ideas  
+in the form of a flow chart to finalize the game flow. It is also a learning experience to observe how my other team members are striving to imbibe into the rest, the  
+spirit of their selected XP values.
+
+Week 3
+We finally have a workflow finalized and a game plan to work on now. We have divided responsibilities among each other and are successfully communicating using Waffle, GitHub. Each team member now recognizes his responsibility and people are starting to contribute in their own unique ways to the project. Finally understanding UML and how it can be converted to code is helping us focus on visualization which will be our target for this week. We have decided to work on UML this week and share our  
+visualizations in the next team meeting. I feel this is one of the most important parts of our work till now, as UML will help us understand each other's vision about  
+this project completely. I am excited to see what result this collaboration of UML diagrams will bring to the table. I am keeping true to my chosen XP value and implementing it successfully by analyzing in my mind how each decision that we take as team will affect the objective in the grand scheme of things. Trying to analyze the effect of each choice we make so as to stay on the path that we had chosen in the start. I must admit, it is difficult to keep true to my chosen XP value principle but I feel as though I am getting better at it every day.
+
+Week 4
+Today, we finally ironed out a project plan which spans the duration of the project, while leaving room for future work as well. A lot of activity on the Kanban Board  
+is expected this week as team members have a concrete idea as to the deliverables of the project. Earlier, where we had longer team meetings and met just once or  
+twice a week. Now, we are gradually having shorter but more frequent team meetings as ideas take material shape and work progresses faster. This team meeting was  
+dedicated to the creation of backlog cards, a topic which although was part of past discussions didn’t receive its full due. This is important as to follow the Kanban  
+methodology it is necessary that we define our all backlog cards as soon as possible. Another advantage of this is that, once all the backlogs that we can think of are available for viewing on the Kanban board, any member can choose what he wants to work with and start work immediately.
+As we delve deeper into the project, I can know see in the larger picture how Kanban Board helps a team become more organized and productive. Also, as we progress in  
+our coursework side-by-side, how Kanban is different from Scrum. Seeing the backlog cards gives us a good estimate of how much more work is left to be done in the  
+project and as cards move across the board, we can identify the contributions of individual team members as well. The CFD is proving to be a boon in this respect. I  
+feel it is the CFD, that most represents my XP value "See the whole" in terms of the Kanban Board.
+
+Week 5
+We are back after a short hiatus! After taking a break for our midterms, this week was all about getting back in the groove of where we left off. From a "see the whole perspective", if you go back and see what we have achieved over the past four weeks - I am satisfied with our progress so far and firmly believe that we are on the right track and doing things the right way at the right pace. Now as the transition from Kanban Board to Scrum is in progress, the experience of learning Kanban teachings influence every aspect of sprint methodologies that I am trying to learn. If this comparison will tend to have a positive or a negative impact in the long run is yet to be seen, but as of now in my mind it's Kanban vs Sprint. What I derive from this is, professor you wanted us to experience both the methodologies so we can be our own judges of which one is better and why.
+From a technical perspective now, the Sprint task sheet for sprint enables one to work towards a fixed target and the most positive result I can see right of the bat is that it avoids unnecessary stress and pressure on developers. In the team meeting I highlighted how Task sheet feeds the Burndown chart and how we can gauge progress by interpreting this burndown chart. I also made a push for debating the Cumulative Flow Diagram with the Burndown Chart and how we could use them both to get a more accurate standing of the Work Completed, Time Remaining and the Work in Progress. Every meeting until now I feel has been dominated by one of our selected XP values and I feel this one was dominated by mine. Returning back from a short break meant we were compelled to consider the entire picture before we continue and this is why I feel so. I am excited to see what the next week will bring to the table as we begin our first Sprint in full swing.
+
+Week 6
+Project design and development are running synchronously in full swing now as we face new design challenges the deeper we delve in the project. The more we  
+understand the importance of good design in the project, we understand how easy it is to introduce changes in the original development plan if a good methodology is  
+followed when designing the architecture. Our job is made simpler as we can visualize our design because of BlueJ's inbuilt overview diagram feature. Overall picture  
+of the project is lost sometimes because now it is a time to develop individual verticals in the project. As far as design patterns are concerned, I have selected  
+"observer" as the pattern I’d like to follow. Now, for this week our focus is centered around a deeper understanding of how to code so as to implement our selected  
+design pattern because the pseudo code and business logic of our project is development ready.
+We have also now transitioned smoothly from Kanban to the Sprint methodology and it is fascinating to see how the two different methodologies affect project  
+development as it progresses. Earlier our commits were not spaced equally as we added new deliverables to our GitHub repository but now with sprint, as weekly targets  
+take precedence over total work done, commits all across the board have standardized quite a bit. I have introduced a new aspect to team meetings which we are going to follow now is, at the end of every team meeting we look back at day one to see how far we have come. I am hoping that by doing this we can gain insight if something was missed by us so far. This experiment should yield positive outcomes.
+
+Week 7
+Verticals implementation is on in full swing. Navigate from RESTful API implementation to Game design to Greenfoot and Java Design Patterns to RMI in cycles, working a bit on each part and then rotating between the others. More than just coding however, this week was about trying to code in a specific design pattern. Each team member continues to make waves and contribute in ways I never thought possible for this project. In the beginning, I didn't think the scope of the project was that large, but now with the introduction of design patterns and Docker, it is on a whole other level. For the first time since we started working on this game, "Seeing the whole" actually scares us a bit, because of the scale and volume of stuff left to do. 
+So, instead of upholding my value this week, I was forced to let it slide a bit and focus on "Step by Step". I guess from an individual module view point, see the whole still makes sense but in that limited scope only for now. As we continue to climb up the mountain made of backlogs and advance through the sprint, maybe I can uphold my XP value in the true sense of its term and meaning again.
+
+Week 8
+We are now in the final stages of development for our game. Server side logic is implemented but all team members have recommended some changes which are still being debated and so that will be on hold until the next team meeting. Client side development meanwhile is on in full swing. Working with UI which was my focus, insipires creativity in me to make something beautiful. I am trying to implement this same concept in my code in a way that Professor Paul taught in class. I try and fail in this respect but each day I learn something new that I did not know before. One day soon, I know I will succeed and the taste of that success will be sweet. A couple more screens are left to be designed and implemented on the UI front which I am working on now and will complete before the weekend. Keeping in mind the design pattern methodology poses unique and significant challenges as far as the implementation of part is concerned but I am getting better at it slowly.
+From an overall standpoint we have almost reached the finish line and once we take those final few laps, this amazing journey will culminate and we will finally reap the rewards of our harvest. I will probably be able to add testimony to that fact later this weekend and maybe add some more wit to this week's entry.

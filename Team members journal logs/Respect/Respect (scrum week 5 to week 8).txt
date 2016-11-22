@@ -1,0 +1,53 @@
+Week 5:
+
+Early in the week we had standup discussing about scrum methodology and project design. We discussed our game design and implementation method in docker 
+environment. Team members designed the client server communication using RMI but since professor introduced RESTful services and design patterns, we had to 
+adapt to the new requirement.
+
+Team respects each other considering the efforts they bring to the table. Sunil has made an effort to build up the starter code for the docker environment. 
+Team discussed about the Restful services and how could we implement it in our game. Since Akshay has a experience in deploying applications in docker, team 
+respected his inputs and suggestions regarding the docker usage for deploying applications. Everyone respects each other even if there exist differences in their 
+thinking about something. They would bring up their idea during the discussion and respect what others had to say about it. They resolve the differences by 
+adapting to idea that helps the project function smoothly.
+
+
+
+Week 6 :
+
+This week we had discussions based on game logic development and the design patterns that we need to implement. 
+In this discussions we planned and analysed how to improve the game components little by little and collaborate end of the week. 
+Every member of the team is contributing something important everyday and these efforts directed towards final picture of our project completion.
+
+
+when one member is working on some component then others wait for the person to commit and consider his changes and work on it. 
+I feel that this attitude is very essential for every project team and our team has great amount of it. Each member values the inputs of other members 
+and develops components that is acceptable for the project. We plan to develop code and test parallelly through next two weeks and finally test whole project 
+end to end.
+
+
+
+
+Week 7:
+
+During this week’s sprint we accomplished to complete server side modules. Server side code is fully functional, during development it was parallely tested. 
+Client side integration and development is been scheduled for next sprint. Next week we are planning to integrate the client logic with server side and test 
+parallely. Also we have to deploy it in the docker and test its functioning. It is necessary to have frequent feedback from users in development phase itself, 
+so that implementation can be improved during development.
+
+This week we were stuck at some error and sunil was there to quickly provide us the inputs to fix the error. Team respects him because he brings experienced 
+thought process to the table. So far team members have displayed great mutual respect to each other. The way team is dedicated and portrays their integrity 
+toward accomplishing tasks is worth admiring. As representing respect value i ensured that every member has provided their inputs during discussion and have 
+shared their view about the design or project decisions. 
+
+
+Week 8 :
+
+This week was about finishing up the game development and performing various tests end to end. By practising scrum we feel it makes things progress quickly, 
+daily stand ups are key for maintaining the pace in deadline induced scenarios. We wrapped things on both server and client side and we are planning to 
+make some non cs students to play the game and teach them binary search concept.
+
+
+By representing respect value in the team i felt happy as every member respects and values other teammates inputs. Team is happy with each other, the effort 
+they put all these weeks and the game is now developed. We have constantly performed tests on individual units and optimized code accordingly. We would push 
+the code into docker environment and test by connecting to it remotely.Once we finish up with remote testing we would go for aplha and beta users feedback and 
+improvement if need be.

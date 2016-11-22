@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=NumberModel
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ NumberModel\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=NumberModel\ getInstance()
+comment2.params=no
+comment2.target=void\ setNo(int)
+comment3.params=
+comment3.target=int\ getNo()
+comment4.params=no
+comment4.target=void\ setNumbers(java.lang.Integer[])
+comment5.params=
+comment5.target=java.lang.Integer[]\ getNumber()
+numComments=6

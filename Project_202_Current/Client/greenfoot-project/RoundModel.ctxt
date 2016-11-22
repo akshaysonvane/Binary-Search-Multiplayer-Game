@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=RoundModel
+comment1.params=
+comment1.target=int\ getScore()
+comment2.params=score
+comment2.target=void\ setScore(int)
+comment3.params=
+comment3.target=int\ getClicks()
+comment4.params=clicks
+comment4.target=void\ setClicks(int)
+comment5.params=
+comment5.target=int\ getRoundStatus()
+comment6.params=roundStatus
+comment6.target=void\ setRoundStatus(int)
+comment7.params=
+comment7.target=RoundModel\ getInstance()
+numComments=8

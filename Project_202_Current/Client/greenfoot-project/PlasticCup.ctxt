@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=PlasticCup
+comment1.params=
+comment1.target=PlasticCup()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=index
+comment3.target=void\ checkNumber(int)
+numComments=4
