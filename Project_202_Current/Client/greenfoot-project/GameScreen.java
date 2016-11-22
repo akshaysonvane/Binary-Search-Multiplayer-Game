@@ -1,6 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.*;
+import java.lang.*;
 /**
  * Write a description of class GameScreen here.
  * 
@@ -10,6 +13,11 @@ import java.util.Collections;
 public class GameScreen extends World
 {
     GreenfootSound backgroundMusic = new GreenfootSound("bgm game.wav");
+    List<Player> players = new ArrayList<Player>();
+    DataModel db= new DataModel();
+    PlayerModel pm= new PlayerModel();
+    IPlayerIterator iterPlayer;
+    Iterator iterator;
 
     public GameScreen()
     {    
@@ -144,5 +152,39 @@ public class GameScreen extends World
 
         Message message = new Message();
         addObject(message,361,431);
+
+        DispScore score= new DispScore();
+        addObject(score,761,431);
+        String score1="";
+        addObject(new Label(DataModel.getInstance().getUserId()+" your score is : "),665, 440);
+        iterPlayer = DataModel.getInstance().getPlayerModel();
+        iterator = iterPlayer.createIterator();
+        while(iterator.hasNext())
+        {
+            System.out.println("In loop gamescreen");
+            Player p = (Player) iterator.next();
+            System.out.print(p.getName() + " From gamescreen" + p.getScore());
+            score1=""+p.getScore();
+            if(DataModel.getInstance().getUserId().equals(p.getName()))
+            {
+                //System.out.println("In loop Score display "+p.getName());
+                addObject(new Label(""+p.getScore()), 737, 440);
+            }
+            // System.out.print(p.getName() + " From gamescreen" + p.getScore());
+        }
+
+        //addObject(new Label(DataModel.getInstance().getUserId()+"your score is : "+score1),665, 440);
+        //System.out.println(DataModel.getInstance().getUserId());
+        //System.out.println("From gamescreen "+pm.getPlayers());
+        /*
+        Iterator<Player> itr = players.iterator();
+        String str = "";
+        while(itr.hasNext()) {
+        Player p = itr.next();
+        if(db.getInstance().getUserId()==p.getName()){
+        //  str += p.getName() + " " + p.getScore();
+        System.out.println(p.getName()+"in gamescreen score"+p.getScore());
+        }
+        }*/
     }
 }

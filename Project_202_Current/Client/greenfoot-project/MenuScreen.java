@@ -31,12 +31,12 @@ public class MenuScreen extends World
         Instructions instructions = new Instructions();
         addObject(instructions,537,457);
         Credits credits = new Credits();
-        addObject(credits,535,531);
+        addObject(credits,535,570);
         GameMode gameMode = new GameMode();
         addObject(gameMode,539,337);
         playgame.setLocation(537,399);
-        instructions.setLocation(538,469);
-        playgame.setLocation(536,403);
-        gameMode.setLocation(533,337);
+        instructions.setLocation(538,510);
+        playgame.setLocation(536,450);
+        gameMode.setLocation(533,390);
     }
 }

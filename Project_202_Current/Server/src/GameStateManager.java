@@ -33,14 +33,16 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 		{
 			// 0 = waiting to start
 			case 0:
+                                System.out.println("Waiting For round " + MultiplayerGameCore.getInstance().getRound() + " To Start");
 				if ((nCurrentTime - time) > 5000 && MultiplayerGameCore.getInstance().getRoundLeft() > 0)
 				{
 					System.out.println("Case 0");
 					currentState = gameStartState;
 					time = nCurrentTime;
+                                        RandomNumberList rn = RandomNumberList.getInstance();
+					rn.generateRandomNumbers();
 					notifyObserver();
-					System.out
-							.println("Waiting For round " + MultiplayerGameCore.getInstance().getRound() + " To Start");
+					
 				}
 				break;
 			// 1=Start
@@ -49,28 +51,37 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 				{
 					System.out.println("Case 1");
 					currentState = gameRunningState;
-					time = nCurrentTime;
-//					RandomNumberList rn = RandomNumberList.getInstance();
-//					rn.generateRandomNumbers();
+					time = nCurrentTime;				
 					notifyObserver();
-					System.out.println("Start Round");
+					
 				}
+                                System.out.println("Start Round");
 				break;
 			// 2 = running
 			case 2:
-				if ((nCurrentTime - time) > 100000)
+				if ((nCurrentTime - time) > 30000)
 				{
 					System.out.println("Case 2");
 					currentState = gameFinishedState;
 					time = nCurrentTime;
+<<<<<<< HEAD
 					notifyObserver();
 					System.out.println("Round Running");
 					allDone();
+=======
+					notifyObserver();					
+>>>>>>> 45882c60554a5972eaa15773cc42efa1e9f904ee
 				}
+                                System.out.println("Round Running");
 				break;
 			// 3 = finished
 			case 3:
+<<<<<<< HEAD
 				if ((nCurrentTime - time) > 5000 || alldone)
+=======
+                                System.out.println("Round finished");
+				if ((nCurrentTime - time) > 5000)
+>>>>>>> 45882c60554a5972eaa15773cc42efa1e9f904ee
 				{
 					System.out.println("Case 3");
 					MultiplayerGameCore.getInstance().setRoundDone();
@@ -78,7 +89,7 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 					currentState = gameWaitingToStartState;
 					time = nCurrentTime;
 					notifyObserver();
-					System.out.println("Round finished");
+					
 				}
 				break;
 		}

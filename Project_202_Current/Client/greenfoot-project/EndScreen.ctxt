@@ -4,4 +4,6 @@ comment1.params=
 comment1.target=EndScreen()
 comment2.params=
 comment2.target=void\ showPlayers()
-numComments=3
+comment3.params=
+comment3.target=void\ prepare()
+numComments=4
