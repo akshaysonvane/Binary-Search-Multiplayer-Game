@@ -9,7 +9,7 @@ public class PlasticCup extends Actor
     {
         GreenfootImage image = getImage();
         image.scale(80, 80);
-        image.mirrorVertically();
+        //image.mirrorVertically();
 
         this.nm = NumberModel.getInstance();
     }
