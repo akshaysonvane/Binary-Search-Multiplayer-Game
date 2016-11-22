@@ -12,6 +12,8 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 	IGameState gameRunningState = new GameRunningState();
 	IGameState gameStartState = new GameStartState();
 	IGameState gameWaitingToStartState = new GameWaitingToStartState();
+	
+	boolean alldone;
 
 	IGameState currentState;
 	long time = System.currentTimeMillis();
@@ -63,11 +65,12 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 					time = nCurrentTime;
 					notifyObserver();
 					System.out.println("Round Running");
+					allDone();
 				}
 				break;
 			// 3 = finished
 			case 3:
-				if ((nCurrentTime - time) > 5000)
+				if ((nCurrentTime - time) > 5000 || alldone)
 				{
 					System.out.println("Case 3");
 					MultiplayerGameCore.getInstance().setRoundDone();
@@ -108,5 +111,21 @@ public class GameStateManager extends TimerTask implements IGameStateManager
 		}
 
 	}
+	
+	
+	public void allDone(){
+		int count =0;
+			for(Player p: player){
+		
+				if(p.getRoundStatus()==1)
+					count++;
+				}
+		
+			if(count==p.size())
+			{
+				alldone = true;
+			}
+		}
+	
 
 }
