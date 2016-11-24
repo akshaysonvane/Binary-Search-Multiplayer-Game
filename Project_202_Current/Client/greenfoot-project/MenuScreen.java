@@ -16,13 +16,13 @@ public class MenuScreen extends World
     public MenuScreen()
     {    
         super(1100, 600, 1);
-        
+
         GreenfootImage image = getBackground();
         image.scale(1100, 600);
-        
+
         prepare();
     }
-    
+
     void prepare()
     {
 
@@ -38,5 +38,11 @@ public class MenuScreen extends World
         instructions.setLocation(538,510);
         playgame.setLocation(536,450);
         gameMode.setLocation(533,390);
+
+        StatusDisp status= new StatusDisp();
+        addObject(status,533,330);
+        status.setLocation(533,330);
+        String text="To display status";
+        addObject(new Label_2(text),533,330);
     }
 }

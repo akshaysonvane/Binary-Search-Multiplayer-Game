@@ -1,28 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
 
 /**
- * Write a description of class Credit here.
+ * Write a description of class Guessed here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Credit extends World
+public class Guessed extends World
 {
 
     /**
-     * Constructor for objects of class Credit.
+     * Constructor for objects of class Guessed.
      * 
      */
-    public Credit()
+    public Guessed()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1100, 600, 1);
+        super(1100, 600, 1); 
         GreenfootImage image = getBackground();
-        image.scale(1100, 600);   
-        
-        
-        BackMenu b1= new BackMenu();
-        addObject(b1,50,30);
+        image.scale(1100, 600);
     }
 }

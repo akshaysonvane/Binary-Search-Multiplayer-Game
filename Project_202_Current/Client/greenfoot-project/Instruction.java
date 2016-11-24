@@ -21,7 +21,7 @@ public class Instruction extends World
 
         super(1100, 600, 1);
         GreenfootImage image = getBackground();
-        image.scale(1100, 575);
+        image.scale(1100, 600);
         //setImage("Instructions.jpg");
         
         BackMenu b= new BackMenu();

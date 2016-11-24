@@ -154,14 +154,14 @@ public class GameScreen extends World
         addObject(message,361,431);
 
         DispScore score= new DispScore();
-        addObject(score,761,431);
+        addObject(score,761,426);
         String score1="";
         addObject(new Label(DataModel.getInstance().getUserId()+" your score is : "),665, 440);
         iterPlayer = DataModel.getInstance().getPlayerModel();
         iterator = iterPlayer.createIterator();
         while(iterator.hasNext())
         {
-            System.out.println("In loop gamescreen");
+           // System.out.println("In loop gamescreen");
             Player p = (Player) iterator.next();
             System.out.print(p.getName() + " From gamescreen" + p.getScore());
             score1=""+p.getScore();
@@ -173,18 +173,6 @@ public class GameScreen extends World
             // System.out.print(p.getName() + " From gamescreen" + p.getScore());
         }
 
-        //addObject(new Label(DataModel.getInstance().getUserId()+"your score is : "+score1),665, 440);
-        //System.out.println(DataModel.getInstance().getUserId());
-        //System.out.println("From gamescreen "+pm.getPlayers());
-        /*
-        Iterator<Player> itr = players.iterator();
-        String str = "";
-        while(itr.hasNext()) {
-        Player p = itr.next();
-        if(db.getInstance().getUserId()==p.getName()){
-        //  str += p.getName() + " " + p.getScore();
-        System.out.println(p.getName()+"in gamescreen score"+p.getScore());
-        }
-        }*/
+
     }
 }
