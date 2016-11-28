@@ -26,7 +26,7 @@ public class MenuScreen extends World
     void prepare()
     {
 
-        PlayGame playgame = new PlayGame();
+        PlayGame playgame = new PlayGame(this);
         addObject(playgame,532,379);
         Instructions instructions = new Instructions();
         addObject(instructions,537,457);
@@ -42,7 +42,7 @@ public class MenuScreen extends World
         StatusDisp status= new StatusDisp();
         addObject(status,533,330);
         status.setLocation(533,330);
-        String text="To display status";
+        String text="Game Status";
         addObject(new Label_2(text),533,330);
     }
 }

@@ -23,10 +23,14 @@ public class PlayGame extends Actor
 
     private Connection connect;
 
-    public PlayGame()
+    MenuScreen screen;
+
+    public PlayGame(MenuScreen screen)
     {
         connect = new Connection();
         timer = new Timer();
+
+        this.screen = screen;
     }
 
     public void act() 
@@ -56,10 +60,14 @@ public class PlayGame extends Actor
             //All calls apart from StartGame are sequiantial as each call is a dependency for the next call.
             if(startServer())
             {
+                displayStatus("Starting Server");
                 if(joinGame())
                 {
+                    displayStatus("Joining Game");
                     if(startGame())
                     {
+                        displayStatus("Starting Game");
+
                         task = new TimerTask() {
                             @Override
                             public void run() {
@@ -139,5 +147,11 @@ public class PlayGame extends Actor
             timer.cancel();
             Greenfoot.setWorld(new EndScreen());
         }
+    }
+
+    public void displayStatus(String text)
+    {
+        screen.addObject(new StatusDisp() ,533,330);
+        screen.addObject(new Label_2(text),533,330);
     }
 }

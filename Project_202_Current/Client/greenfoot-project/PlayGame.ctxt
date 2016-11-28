@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=PlayGame
-comment1.params=
-comment1.target=PlayGame()
+comment1.params=screen
+comment1.target=PlayGame(MenuScreen)
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
@@ -14,4 +14,6 @@ comment6.params=
 comment6.target=boolean\ startGame()
 comment7.params=
 comment7.target=void\ getStatus()
-numComments=8
+comment8.params=text
+comment8.target=void\ displayStatus(java.lang.String)
+numComments=9
