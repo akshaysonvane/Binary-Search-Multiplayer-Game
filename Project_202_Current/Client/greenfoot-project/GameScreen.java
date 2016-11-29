@@ -24,6 +24,7 @@ public class GameScreen extends World
         super(1100, 600, 1); 
         //GreenfootImage image = getBackground();
         //image.scale(1100, 600);
+
         backgroundMusic.playLoop();
         Integer num[]= new Integer[12];
         num = NumberModel.getInstance().getNumber();
@@ -153,26 +154,25 @@ public class GameScreen extends World
         Message message = new Message();
         addObject(message,361,431);
 
-        DispScore score= new DispScore();
-        addObject(score,761,426);
-        String score1="";
-        addObject(new Label(DataModel.getInstance().getUserId()+" your score is : "),665, 440);
-        iterPlayer = DataModel.getInstance().getPlayerModel();
-        iterator = iterPlayer.createIterator();
-        while(iterator.hasNext())
-        {
-           // System.out.println("In loop gamescreen");
-            Player p = (Player) iterator.next();
-            System.out.print(p.getName() + " From gamescreen" + p.getScore());
-            score1=""+p.getScore();
-            if(DataModel.getInstance().getUserId().equals(p.getName()))
-            {
-                //System.out.println("In loop Score display "+p.getName());
-                addObject(new Label(""+p.getScore()), 737, 440);
-            }
+        // DispScore score= new DispScore();
+        // addObject(score,761,426);
+
+        // addObject(new Label(DataModel.getInstance().getUserId()+" your score is : "),665, 440);
+        // iterPlayer = DataModel.getInstance().getPlayerModel();
+        // iterator = iterPlayer.createIterator();
+
+        // while(iterator.hasNext())
+        // {
+            // // System.out.println("In loop gamescreen");
+            // Player p = (Player) iterator.next();
             // System.out.print(p.getName() + " From gamescreen" + p.getScore());
-        }
-
-
+            // String score1=""+p.getScore();
+            // if(DataModel.getInstance().getUserId().equals(p.getName()))
+            // {
+                // //System.out.println("In loop Score display "+p.getName());
+                // addObject(new Label(""+p.getScore()), 737, 440);
+            // }
+            // // System.out.print(p.getName() + " From gamescreen" + p.getScore());
+        // }
     }
 }
