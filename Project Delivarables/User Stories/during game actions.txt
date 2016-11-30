@@ -1,4 +1,4 @@
-Story: Game session play actions
+Story: current players to receive update if new player joins game.
 
 Actors:
 	Roger: New player who has just connected to the game.

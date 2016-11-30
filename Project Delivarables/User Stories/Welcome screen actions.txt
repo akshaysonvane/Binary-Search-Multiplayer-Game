@@ -28,7 +28,7 @@ Scenario 1: Roger wishes to view game instructions
 
 
 
-Scenario 2:	Roger is eager to know who team of game developers
+Scenario 2:	Roger is eager to know team of game developers
 
 	Given that Roger is on welcome screen of the game
 	And the welcome screen has 'credits' button that directs to credits screen
