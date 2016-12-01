@@ -1,0 +1,19 @@
+use case name			Join a game session
+
+Related Requirement 		Requirement A.1
+Precondition			Player name. A player can join game with a unique player name.
+Successful End condition	Player is able to join currently running game session or session that will start next.
+Failed End Condtion		Player is not able to join game.
+Primary Actors			Player
+Secondary Actors		Game session Manager
+Trigger				The player sends request to game session manager to join game
+
+Main flow		Step		Action
+			1		The player enters a player name in game console
+			2		player submit the request to join game to game session manager.
+			3		Game session manager verifies the entered name and confirm that the name is unique.
+			4		Player is able to join the game.
+			
+Extension		Step		Branching Action
+			3.1		Entered player name is already taken by other player.
+			3.2		Player is not able to join game and asked to try with other name.
