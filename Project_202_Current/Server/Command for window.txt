@@ -1,11 +1,21 @@
-<<<<<<< HEAD
+Step 1:
+cd "C:\Users\sunil\OneDrive\Documents\GitHub\cmpe202-project\Project_202_Current\Server"
+
+Step 2:
 javac -cp dist/restlet.jar;dist/restlet-json.jar;dist/json.jar -d build src/*.java
 
+Step 3:
+cd build
+jar -cvfe ../dist/app.jar Mobilecloud .
 
-start java -cp build;dist/restlet.jar;dist/json.jar;dist/restlet-json.jar multiplayerGameServer.MultiplayerGame multiplayerGameServer.RandomNumberList multiplayerGameServer.Player multiplayerGameServer.MultiplayerGameCore multiplayerGameServer.LeaveGame multiplayerGameServer.JoinGame
-=======
-javac -cp dist/org.restlet.ext.json.jar;dist/restlet.jar;dist/json.jar -d build src/*.java
+Step 4: To run local machine
+start java -cp dist/app.jar;dist/restlet.jar;dist/restlet-json.jar;dist/json.jar multiplayergameServer.MultiplayerGame
 
+Step 5: To run on docker
+docker build -t multiplayergame .
+docker run --name multiplayergame -td --net=host multiplayergame
 
-start java -cp build dist/org.restlet.ext.json.jar;dist/restlet.jar;dist/json.jar multiplayerGameServer.MultiplayerGame multiplayerGameServer.RandomNumberList multiplayerGameServer.Player multiplayerGameServer.MultiplayerGameCore multiplayerGameServer.LeaveGame multiplayerGameServer.JoinGame
->>>>>>> origin/master
+Step 6: To push image in docker hub
+Create sgarg110325/multiplayergame on hub.
+Tag the image as "docker tag c3c1c8ce078c sgarg110325/multiplayergame"
+push the tag "docker push sgarg110325/multiplayergame"
