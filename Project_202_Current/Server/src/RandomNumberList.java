@@ -39,7 +39,9 @@ public class RandomNumberList
 			}
 		}
 
-		Collections.sort(arrayList);
+		
+		arrayList = new DataSet().doSort(arrayList);
+		//Collections.sort(arrayList);
 		no = arrayList.get(randomNumberGenerator.nextInt(BOUND - 1));
 	}
 

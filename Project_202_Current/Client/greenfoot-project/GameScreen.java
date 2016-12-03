@@ -22,8 +22,8 @@ public class GameScreen extends World
     public GameScreen()
     {    
         super(1100, 600, 1); 
-        //GreenfootImage image = getBackground();
-        //image.scale(1100, 600);
+        GreenfootImage image = getBackground();
+        image.scale(1100, 600);
 
         backgroundMusic.playLoop();
         Integer num[]= new Integer[12];
