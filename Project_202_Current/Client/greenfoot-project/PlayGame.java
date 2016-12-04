@@ -40,10 +40,10 @@ public class PlayGame extends Actor
         if(Greenfoot.mouseMoved(null))
             hover = Greenfoot.mouseMoved(this);
         if(hover){
-            setImage("button_play-game-hover.png");
+            this.setImage("button_play-game-hover.png");
         }
         else
-            setImage("button_play-game.png");
+            this.setImage("button_play-game.png");
 
         if(Greenfoot.mouseClicked(this))
         {
