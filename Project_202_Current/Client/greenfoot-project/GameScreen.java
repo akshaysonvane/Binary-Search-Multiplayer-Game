@@ -154,6 +154,9 @@ public class GameScreen extends World
         Message message = new Message();
         addObject(message,361,431);
 
+        ChatBird chatBird = new ChatBird();
+        addObject(chatBird, 245, 517);
+
         // DispScore score= new DispScore();
         // addObject(score,761,426);
 
@@ -180,15 +183,12 @@ public class GameScreen extends World
 
         while(iterator.hasNext())
         {
-            // System.out.println("In loop gamescreen");
             Player p = (Player) iterator.next();
             String score1=""+p.getScore();
             if(DataModel.getInstance().getUserId().equals(p.getName()))
             {
-                //System.out.println("In loop Score display "+p.getName());
-                addObject(new Label("Round "+p.getRound()), 737, 440);
+                addObject(new Label("Round "+p.getRound()), 1000, 54);
             }
-            // System.out.print(p.getName() + " From gamescreen" + p.getScore());
         }
     }
 }
