@@ -14,8 +14,6 @@ public class GameScreen extends World
 {
     GreenfootSound backgroundMusic = new GreenfootSound("bgm game.wav");
     List<Player> players = new ArrayList<Player>();
-    DataModel db= new DataModel();
-    PlayerModel pm= new PlayerModel();
     IPlayerIterator iterPlayer;
     Iterator iterator;
 
@@ -187,7 +185,8 @@ public class GameScreen extends World
             String score1=""+p.getScore();
             if(DataModel.getInstance().getUserId().equals(p.getName()))
             {
-                addObject(new Label("Round "+p.getRound()), 1000, 54);
+                addObject(new Label(" Round "+p.getRound() + " "), 1000, 54);
+                break;
             }
         }
     }

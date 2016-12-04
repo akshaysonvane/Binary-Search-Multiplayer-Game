@@ -8,11 +8,7 @@ import java.awt.Color;
  * @version (a version number or a date)
  */
 public class Label extends Actor
-{ /**
-     * Act - do whatever the Label wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-
+{ 
     public Label()
     {
         this("");
@@ -22,6 +18,5 @@ public class Label extends Actor
     public Label(String txt)
     {
         setImage(new GreenfootImage(txt,20,Color.black,Color.WHITE));
-
     }    
 }
