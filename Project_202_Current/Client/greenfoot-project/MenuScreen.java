@@ -44,5 +44,8 @@ public class MenuScreen extends World
         status.setLocation(533,330);
         String text="Game Status";
         addObject(new Label_2(text),533,330);
+        Reset reset = new Reset();
+        addObject(reset,1070,25);
+        reset.setLocation(1058,38);
     }
 }

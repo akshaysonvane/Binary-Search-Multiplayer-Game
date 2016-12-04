@@ -163,16 +163,32 @@ public class GameScreen extends World
 
         // while(iterator.hasNext())
         // {
-            // // System.out.println("In loop gamescreen");
-            // Player p = (Player) iterator.next();
-            // System.out.print(p.getName() + " From gamescreen" + p.getScore());
-            // String score1=""+p.getScore();
-            // if(DataModel.getInstance().getUserId().equals(p.getName()))
-            // {
-                // //System.out.println("In loop Score display "+p.getName());
-                // addObject(new Label(""+p.getScore()), 737, 440);
-            // }
-            // // System.out.print(p.getName() + " From gamescreen" + p.getScore());
+        // // System.out.println("In loop gamescreen");
+        // Player p = (Player) iterator.next();
+        // System.out.print(p.getName() + " From gamescreen" + p.getScore());
+        // String score1=""+p.getScore();
+        // if(DataModel.getInstance().getUserId().equals(p.getName()))
+        // {
+        // //System.out.println("In loop Score display "+p.getName());
+        // addObject(new Label(""+p.getScore()), 737, 440);
         // }
+        // // System.out.print(p.getName() + " From gamescreen" + p.getScore());
+        // }
+
+        iterPlayer = DataModel.getInstance().getPlayerModel();
+        iterator = iterPlayer.createIterator();
+
+        while(iterator.hasNext())
+        {
+            // System.out.println("In loop gamescreen");
+            Player p = (Player) iterator.next();
+            String score1=""+p.getScore();
+            if(DataModel.getInstance().getUserId().equals(p.getName()))
+            {
+                //System.out.println("In loop Score display "+p.getName());
+                addObject(new Label("Round "+p.getRound()), 737, 440);
+            }
+            // System.out.print(p.getName() + " From gamescreen" + p.getScore());
+        }
     }
 }

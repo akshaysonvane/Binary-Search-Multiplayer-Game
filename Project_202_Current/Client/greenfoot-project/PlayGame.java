@@ -15,7 +15,7 @@ import org.restlet.data.* ;
 
 public class PlayGame extends Actor
 {
-    private boolean hover=false;
+    private boolean hover = false;
     private boolean changeWorld = true;
 
     private Timer timer;
@@ -46,7 +46,7 @@ public class PlayGame extends Actor
             this.setImage("button_play-game.png");
 
         if(Greenfoot.mouseClicked(this))
-        {
+        {   
             //Get userId and store in datamodel for suture usge
             String userId = JOptionPane.showInputDialog("Please Enter name");
             DataModel.getInstance().setUserId(userId);
@@ -100,11 +100,11 @@ public class PlayGame extends Actor
         return true;
         // if(Utils.getInstance().getGameHost())
         // {
-            // return connect.startServer();
+        // return connect.startServer();
         // }
         // else
         // {
-            // return true;
+        // return true;
         // }
     }
 
@@ -143,11 +143,25 @@ public class PlayGame extends Actor
                 changeWorld = false;
             }
         }
+        // if(pm.getPlayers().get(0).getGameState() == 3)
+        // {
+        // timer.cancel();
+        // Greenfoot.setWorld(new EndScreen());
+        // }
         if(pm.getPlayers().get(0).getGameState() == 3)
         {
-            timer.cancel();
-            Greenfoot.setWorld(new EndScreen());
+            if(pm.getPlayers().get(0).getRound() != Utils.rounds)
+            {
+                RoundModel.getInstance().setRoundStatus(0);
+                changeWorld = true;
+            }
+            else
+            {
+                timer.cancel();
+                Greenfoot.setWorld(new EndScreen());
+            }
         }
+
     }
 
     public void displayStatus(String text)

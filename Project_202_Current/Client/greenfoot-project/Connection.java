@@ -69,7 +69,7 @@ public class Connection implements IRemoteProxy
         ClientResource client = new ClientResource(url); 
         JSONObject json = null;
         JSONObject json1 = new JSONObject();
-        json1.put("round", 1);
+        json1.put("round", Utils.rounds);
 
         try 
         {
