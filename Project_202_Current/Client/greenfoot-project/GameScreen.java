@@ -12,7 +12,7 @@ import java.lang.*;
  */
 public class GameScreen extends World
 {
-    GreenfootSound backgroundMusic = new GreenfootSound("bgm game.wav");
+    //GreenfootSound backgroundMusic = new GreenfootSound("bgm game.wav");
     List<Player> players = new ArrayList<Player>();
     IPlayerIterator iterPlayer;
     Iterator iterator;
@@ -23,7 +23,7 @@ public class GameScreen extends World
         GreenfootImage image = getBackground();
         image.scale(1100, 600);
 
-        backgroundMusic.playLoop();
+        //backgroundMusic.playLoop();
         Integer num[]= new Integer[12];
         num = NumberModel.getInstance().getNumber();
         int no = NumberModel.getInstance().getNo();
