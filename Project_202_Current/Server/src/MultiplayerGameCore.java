@@ -54,6 +54,16 @@ public class MultiplayerGameCore
 		return false;
 	}
 
+	public Boolean removeAllPlayer()
+	{
+		for (int i = 0; i < playerList.size(); i++)
+		{
+			gameStateManager.detach(playerList.get(i));
+		}
+		playerList.clear();
+		return true;
+	}
+
 	public Boolean updatePlayerData(Player p)
 	{
 		for (int i = 0; i < playerList.size(); i++)
@@ -61,7 +71,7 @@ public class MultiplayerGameCore
 			if (playerList.get(i).getName().equalsIgnoreCase(p.getName()))
 			{
 				playerList.get(i).setRoundStatus(p.getRoundStatus());
-                                playerList.get(i).setScore(p.getScore());
+				playerList.get(i).setScore(p.getScore());
 				// int nCurrScore = playerList.get(i).getScore();
 				// p.setScore(nCurrScore);
 				// All other data already came from client. Otherwise fill in
