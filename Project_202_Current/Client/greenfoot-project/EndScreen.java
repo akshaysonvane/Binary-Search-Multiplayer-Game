@@ -12,6 +12,7 @@ public class EndScreen extends World
         super(1100, 600, 1);
         GreenfootImage image = getBackground();
         image.scale(1100, 600);  
+        
         iterPlayer = DataModel.getInstance().getPlayerModel();
         iterator = iterPlayer.createIterator();
         System.out.println(DataModel.getInstance().getPlayerModel());
