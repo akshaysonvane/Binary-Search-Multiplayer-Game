@@ -97,15 +97,15 @@ public class PlayGame extends Actor
     //Will not be called if game mode is connect game
     public boolean startServer()
     {
-        return true;
-        // if(Utils.getInstance().getGameHost())
-        // {
-        // return connect.startServer();
-        // }
-        // else
-        // {
-        // return true;
-        // }
+        //return true;
+        if(Utils.getInstance().getGameHost())
+        {
+            return connect.startServer();
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public boolean joinGame()
