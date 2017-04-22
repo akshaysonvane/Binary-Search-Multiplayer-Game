@@ -1,5 +1,11 @@
 # Binary-Search-Multiplayer-Game
 
+## Screenshots
+![Homescreen](/Documentation/Screenshots/homescreen.PNG?raw=true "Homescreen")
+![Playscreen](/Documentation/Screenshots/playscreen.PNG?raw=true "Playscreen")
+![Round score](/Documentation/Screenshots/roundscore.PNG?raw=true "Round score")
+![Scoreboard](/Documentation/Screenshots/finalscoreboard.PNG?raw=true "Scoreboard")
+
 ## Features
 * Based on binary search.
 * Implemented using Greenfoot IDE
